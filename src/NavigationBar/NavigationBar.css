@@ -1,0 +1,8 @@
+.navbar {
+    background: #DAE3E7;
+    color: black ;
+}
+body[data-theme="dark"] .navbar {
+    background: black;
+    color: white ;
+}
