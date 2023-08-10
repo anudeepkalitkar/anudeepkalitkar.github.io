@@ -12,6 +12,9 @@ root.render(
   document.getElementById('root'),
   document.addEventListener('DOMContentLoaded', function () {
     M.AutoInit();
+    // M.sidenav();
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
   })
 );
 

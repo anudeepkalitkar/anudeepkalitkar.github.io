@@ -1,12 +1,13 @@
 import './App.css';
 import NavigationBar from './NavigationBar/NavigationBar';
-import { Container, Header } from 'semantic-ui-react'
+import React, { useState, useEffect } from "react";
 
 function App() {
+    const [darkMode, SetDarkMode] = useState(false);
   return (
     
     <div className="body">
-            <NavigationBar />
+            <NavigationBar darkMode = {darkMode}/>
 {/* 
             <div className="row">
                 <div className="col s12 m7">
