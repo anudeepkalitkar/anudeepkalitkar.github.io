@@ -9,3 +9,10 @@ body{
     font-family: "Lato", arial, sans-serif;
 
 }
+
+section {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    background: #1e2124;
+
+  }

@@ -1,0 +1,18 @@
+.intro-desc{
+    word-spacing: 5px;
+    padding-top: 5%;
+    line-height: 1.5;
+}
+.job-desc{
+    word-spacing: 5px;
+    padding-top: 2%;
+    line-height: 1.5;
+    padding-bottom: 2%;
+}
+.skills{
+    padding-top: 5%;
+}
+
+.btn {
+    font-weight: bold;
+}

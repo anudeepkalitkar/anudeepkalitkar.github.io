@@ -1,15 +1,13 @@
 .header {
     padding: 30px 0;
-    background: #1e2124;
     text-align: center;
 
 }
 
 .header .profile-content .name {
-    /* padding-top: 5%; */
-    font-size: 38px;
+    padding-top: 2%;
     margin-bottom: 5px;
-    margin-top: 30px;
+    /* margin-top: 30px; */
     /* color: rgba(255, 255, 255, 0.9); */
 
 }
@@ -17,7 +15,6 @@
 .header .profile-content .desc {
     text-align: justify;    
     font-weight: 400;
-    font-size: 24px;
     margin-top: 0;
     margin-bottom: 15px;
     /* color: rgba(255, 255, 255, 0.7); */
