@@ -1,14 +1,15 @@
-import './App.css';
-import NavigationBar from './NavigationBar/NavigationBar';
-import React, { useState, useEffect } from "react";
+import "./App.css";
+import React, { useState } from "react";
+import NavigationBar from "./NavigationBar/NavigationBar";
+import Header from "./Header/Header";
 
 function App() {
-    const [darkMode, SetDarkMode] = useState(false);
-  return (
-    
-    <div className="body">
-            <NavigationBar darkMode = {darkMode}/>
-{/* 
+	const [darkMode, SetDarkMode] = useState(false);
+	return (
+		<div className="body">
+			<NavigationBar darkMode={darkMode} />
+			<Header darkMode={darkMode} SetDarkMode={SetDarkMode} />
+			{/* 
             <div className="row">
                 <div className="col s12 m7">
                     <AboutMe Content_type="Primary"></AboutMe>
@@ -24,9 +25,8 @@ function App() {
                     <Contact></Contact>
                 </div>
             </div> */}
-
-        </div>
-  );
+		</div>
+	);
 }
 
 export default App;
