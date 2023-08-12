@@ -3,14 +3,8 @@ import "./Header.css";
 import { DisplayPic } from "../StaticInformation/ImagesInfo";
 import { HeaderInfo } from "../StaticInformation/AboutMeInfo";
 const Header = (props) => {
-	const { darkMode, SetDarkMode } = props;
-	const handleMode = (e) => {
-		if (darkMode) {
-			SetDarkMode(false);
-		} else {
-			SetDarkMode(true);
-		}
-	};
+	const { darkMode } = props;
+
 	return (
 		<section>
 			<div className="header">
@@ -50,15 +44,7 @@ const Header = (props) => {
 							</ul>
 						</div>
 						<div className="profile-switch">
-							{/* <div className="dark-mode-switch">
-								<div className="switch">
-									<label>
-										DarkMode
-										<input type="checkbox" onChange={handleMode} />
-										<span className="lever"></span>
-									</label>
-								</div>
-							</div> */}
+							
 							<a className="btn green" href="#!">
 								Projects
 							</a>

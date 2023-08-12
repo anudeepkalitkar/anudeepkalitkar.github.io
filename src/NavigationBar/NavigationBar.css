@@ -24,11 +24,13 @@
 	background: inherit;
 	color: inherit;
 }
-/* .nav-wrapper {
-	position: relative;
-	height: 60px;
-	padding-left: 70px;
-} */
+.nav-item:hover{
+	transform: scale(1.5);
+}
+.switch label{
+	font: inherit;
+	color: inherit;
+}
 .nav-hero {
 	position: absolute;
 	border-radius: 50%;

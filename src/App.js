@@ -5,11 +5,11 @@ import Header from "./Header/Header";
 import AboutMe from "./AboutMe/AboutMe";
 
 function App() {
-	const [darkMode, SetDarkMode] = useState(false);
+	const [darkMode, SetDarkMode] = useState(true);
 	return (
 		<div className="body">
-			<NavigationBar darkMode={darkMode} />
-			<Header darkMode={darkMode} SetDarkMode={SetDarkMode} />
+			<NavigationBar  darkMode={darkMode} SetDarkMode={SetDarkMode} />
+			<Header darkMode={darkMode}  />
             <AboutMe></AboutMe>
 
 			{/* 
