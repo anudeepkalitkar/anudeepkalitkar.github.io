@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import NavigationBar from "./NavigationBar/NavigationBar";
 import Header from "./Header/Header";
 import AboutMe from "./AboutMe/AboutMe";
+import BackGround from "./BackGound/BackGround"
 
 function App() {
 	const [darkMode, SetDarkMode] = useState(true);
@@ -10,7 +11,8 @@ function App() {
 		<div className="body">
 			<NavigationBar  darkMode={darkMode} SetDarkMode={SetDarkMode} />
 			<Header darkMode={darkMode}  />
-            <AboutMe></AboutMe>
+            <AboutMe darkMode={darkMode} ></AboutMe>
+            <BackGround darkMode={darkMode} ></BackGround>
 
 			{/* 
             <div className="row">
