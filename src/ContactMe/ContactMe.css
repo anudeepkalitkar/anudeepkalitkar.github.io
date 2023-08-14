@@ -1,0 +1,10 @@
+.card-panel{
+    background: inherit;
+} 
+.materialize-textarea{
+    overflow-y: hidden;  /* Hide vertical scrollbar */
+    resize: none;        /* Prevent user from resizing the textarea */
+    height: 36px;        /* Adjust based on your design preference */
+    line-height: 36px;   /* Match the height to ensure text is vertically centered */
+    padding: 0 0.75rem;
+}

@@ -3,33 +3,33 @@ import React, { useState } from "react";
 import NavigationBar from "./NavigationBar/NavigationBar";
 import Header from "./Header/Header";
 import AboutMe from "./AboutMe/AboutMe";
-import BackGround from "./BackGound/BackGround"
+import BackGround from "./BackGound/BackGround";
+import ContactMe from "./ContactMe/ContactMe";
+import Projects from "./Projects/Projects";
+import ProjectDescription from "./Projects/ProjectDescription";
 
 function App() {
 	const [darkMode, SetDarkMode] = useState(true);
+	const [projectId, SetProjectId] = useState(null);
 	return (
 		<div className="body">
-			<NavigationBar  darkMode={darkMode} SetDarkMode={SetDarkMode} />
-			<Header darkMode={darkMode}  />
-            <AboutMe darkMode={darkMode} ></AboutMe>
-            <BackGround darkMode={darkMode} ></BackGround>
-
-			{/* 
-            <div className="row">
-                <div className="col s12 m7">
-                    <AboutMe Content_type="Primary"></AboutMe>
-                    <Projects ></Projects>
-                    <Experience></Experience>
-
-                </div>
-
-                <div className="col s12 m4">
-                    <AboutMe Content_type="Secondary"></AboutMe>
-                    <Skills></Skills>
-                    <Education></Education>
-                    <Contact></Contact>
-                </div>
-            </div> */}
+			{projectId && (
+				<ProjectDescription
+					darkMode={darkMode}
+					SetDarkMode={SetDarkMode}
+					projectId={projectId}
+				/>
+			)}
+			{!projectId && (
+				<>
+					<NavigationBar darkMode={darkMode} SetDarkMode={SetDarkMode} />
+					<Header darkMode={darkMode} />
+					<AboutMe darkMode={darkMode}></AboutMe>
+					<BackGround darkMode={darkMode}></BackGround>
+					<Projects darkMode={darkMode} SetProjectId={SetProjectId}></Projects>
+					<ContactMe darkMode={darkMode}></ContactMe>
+				</>
+			)}
 		</div>
 	);
 }

@@ -62,17 +62,17 @@ const BackGround = (props) => {
 	});
 	return (
 		<section className="section">
-			<h3 className="center">Back Ground</h3>
+			<h3 className="center ">Back Ground</h3>
 			<div className="row">
 				<div className="col s12 m6">
 					<div className="container">
-						<h4 className="center">Experience</h4>
+						<h4 className="center section-title ">Experience</h4>
 						{experienceList}
 					</div>
 				</div>
 				<div className="col s12 m6">
 					<div className="container ">
-						<h4 className="center">Education</h4>
+						<h4 className="center section-title">Education</h4>
 						{educationList}
 					</div>
 				</div>

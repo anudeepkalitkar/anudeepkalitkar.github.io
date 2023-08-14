@@ -10,7 +10,7 @@ const AboutMe = (props) => {
 			<div className="row">
 				<div className="col s12 m6">
 					<div className="container">
-						<h4>Well I'm...</h4>
+						<h4 className="section-title">Well I'm...</h4>
 						<h6 className="intro-desc">{Introduction}</h6>
 						<h6 className="job-desc">{JobSeeking}</h6>
 						<div className="center">
@@ -22,7 +22,7 @@ const AboutMe = (props) => {
 				</div>
 				<div className="col s12 m6">
 					<div className="container ">
-						<h4 className="center">My Skills</h4>
+						<h4 className="center section-title">My Skills</h4>
 						<div className="row center skills">
 							<div className="col s12 m2">
 								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="SkillSet" />
