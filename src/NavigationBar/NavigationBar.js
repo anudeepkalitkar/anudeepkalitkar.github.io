@@ -3,7 +3,7 @@ import "./NavigationBar.css";
 import M from "materialize-css";
 
 const NavigationBar = (props) => {
-	const { darkMode, SetDarkMode } = props;
+	const { darkMode, SetDarkMode, SetProjectId } = props;
 
 	const handleMode = (e) => {
 		if (darkMode) {
@@ -16,8 +16,15 @@ const NavigationBar = (props) => {
 		let sidenav = document.querySelector("#mobile-nav");
 		M.Sidenav.init(sidenav, {});
 	}, []);
+
+	const handleNavOnClick = (event) =>{
+		// event.preventDefault();
+		SetProjectId(null);
+	};
+
 	return (
-		<div>
+		// <div className="navbar-fixed">
+		<div id="NavBar">
 			<nav className="navbar z-depth-5">
 				<div className="navbar nav-wrapper">
 					{/* <a href="99kalitkar.in" className="brand-logo"> <img className="nav-hero" src="Images/Me.jpg" alt="Me" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Anudeep Kalitkar</a> */}
@@ -29,27 +36,27 @@ const NavigationBar = (props) => {
 					</a>
 					<ul className="hide-on-med-and-down right">
 						<li>
-							<a href="99kalitkar.in" className="nav-item">
+							<a href="#Header" className="nav-item" onClick={handleNavOnClick}>
 								Home
 							</a>
 						</li>
 						<li>
-							<a href="99kalitkar.in" className="nav-item">
+							<a href="#About" className="nav-item" onClick={handleNavOnClick}>
 								About
 							</a>
 						</li>
 						<li>
-							<a href="99kalitkar.in" className="nav-item">
+							<a href="#Experience" className="nav-item" onClick={handleNavOnClick}>
 								Experience
 							</a>
 						</li>
 						<li>
-							<a href="99kalitkar.in" className="nav-item">
+							<a href="#Projects" className="nav-item" onClick={handleNavOnClick}>
 								Projects
 							</a>
 						</li>
 						<li>
-							<a href="99kalitkar.in" className="nav-item">
+							<a href="#Contact" className="nav-item" onClick={handleNavOnClick}>
 								Contact Info
 							</a>
 						</li>
@@ -71,34 +78,34 @@ const NavigationBar = (props) => {
 							</a>
 						</li>
 					</ul>
-					<ul className="sidenav" id="mobile-nav">
+					<ul className="sidenav" id="mobile-nav" onClick={handleNavOnClick}>
 						<li>
-							<a href="99kalitkar.in" className="nav-item">
+							<a href="99kalitkar.in" className="nav-item" onClick={handleNavOnClick}>
 								&nbsp;
 							</a>
 						</li>
 						<li>
-							<a href="99kalitkar.in" className="nav-item">
+							<a href="#Header" className="nav-item" onClick={handleNavOnClick}>
 								Home
 							</a>
 						</li>
 						<li>
-							<a href="99kalitkar.in" className="nav-item">
+							<a href="#About" className="nav-item" onClick={handleNavOnClick}>
 								About
 							</a>
 						</li>
 						<li>
-							<a href="99kalitkar.in" className="nav-item">
+							<a href="#Experience" className="nav-item" onClick={handleNavOnClick}>
 								Experience
 							</a>
 						</li>
 						<li>
-							<a href="99kalitkar.in" className="nav-item">
+							<a href="#Projects" className="nav-item" onClick={handleNavOnClick}>
 								Projects
 							</a>
 						</li>
 						<li>
-							<a href="99kalitkar.in" className="nav-item">
+							<a href="#Contact" className="nav-item" onClick={handleNavOnClick}>
 								Contact Info
 							</a>
 						</li>

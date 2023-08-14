@@ -1,0 +1,20 @@
+.footer{
+    background-color: black;
+    padding-bottom: 0;
+    /* min-height: 50vb; */
+}
+.footer-heading{
+    padding-top: 5%;
+}
+.footer-desc{
+    padding-top: 3%;
+
+}
+.divider-top{
+    padding-top: 5%;
+
+}
+.divider-bottom{
+    padding-bottom: 5%;
+
+}

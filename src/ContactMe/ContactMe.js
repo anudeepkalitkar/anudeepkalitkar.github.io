@@ -30,7 +30,7 @@ const ContactMe = (props) => {
 		);
 	};
 	return (
-		<section className="section">
+		<section className="section" id="Contact">
 			<h3 className="center ">Contact Me</h3>
 			<br></br>
 			<div className="container ">

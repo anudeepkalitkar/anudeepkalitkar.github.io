@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import axios from "axios";
 import "./ProjectDescription.css";
 import "../App.css";
 import NavigationBar from "../NavigationBar/NavigationBar";
 import { ProjectsInfo } from "../StaticInformation/ProjectInfo";
 const ProjectDescription = (props) => {
-	const { darkMode, SetDarkMode, projectId } = props;
+	const { darkMode, SetDarkMode, projectId, SetProjectId } = props;
 	const projectDetails = ProjectsInfo[projectId ];
 	return (
 		<div className="body">
-			<NavigationBar darkMode={darkMode} SetDarkMode={SetDarkMode} />
+			<NavigationBar darkMode={darkMode} SetDarkMode={SetDarkMode} SetProjectId={SetProjectId} />
 
-			<section>
-				<div className="PD-header center">
+			<section id="PD-header">
+				<div className="PD-header center" >
 					<div className="row">
 						<div className="col s12 m12">
 							<div className="profile-content">

@@ -22,3 +22,10 @@ section {
     padding-top: 5%;
 
 }
+.fixed-action-btn {
+    bottom: 20px;
+    right: 20px;
+}
+:root {
+    color-scheme: dark;
+  }

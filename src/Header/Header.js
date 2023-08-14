@@ -2,12 +2,14 @@ import React from "react";
 import "./Header.css";
 import { DisplayImage } from "../StaticInformation/ImagesInfo";
 import { HeaderInfo } from "../StaticInformation/AboutMeInfo";
+import { linkedinUrl, githubUrl, gmailUrl, instagramUrl } from "../StaticInformation/UrlLinkInfo";
+
 const Header = (props) => {
 	const { darkMode } = props;
 
 	return (
 		<section>
-			<div className="header">
+			<div className="header" id="Header">
 				<div className="row">
 					<div className="col s12 m4">
 						{/* <h1 className="coder">&lt;Coder&gt;</h1> */}
@@ -29,7 +31,7 @@ const Header = (props) => {
 							<ul className="social list-inline">
 								<li className="list-inline">
 									<a
-										href="https://www.linkedin.com/in/anudeep-kalitkar-7b816525b/"
+										href={linkedinUrl}
 										rel="noreferrer"
 										target="_blank">
 										<i className="fab fa-linkedin-in"></i>
@@ -37,7 +39,7 @@ const Header = (props) => {
 								</li>
 								<li className="list-inline">
 									<a
-										href="https://github.com/anudeepkalitkar/"
+										href={githubUrl}
 										rel="noreferrer"
 										target="_blank">
 										<i className="fab fa-github-alt"></i>
@@ -45,7 +47,7 @@ const Header = (props) => {
 								</li>
 								<li className="list-inline">
 									<a
-										href="mailto:anudeep.kalitkar@gmail.com"
+										href={gmailUrl}
 										rel="noreferrer"
 										target="_blank">
 										<i className="fas fa-envelope"></i>
@@ -53,7 +55,7 @@ const Header = (props) => {
 								</li>
 								<li className="list-inline">
 									<a
-										href="https://www.instagram.com/anudeep_kalitkar/"
+										href={instagramUrl}
 										rel="noreferrer"
 										target="_blank">
 										<i className="fab fa-instagram"></i>
@@ -62,7 +64,7 @@ const Header = (props) => {
 							</ul>
 						</div>
 						<div className="profile-switch">
-							<a className="btn green" href="#!">
+							<a className="btn green" href="#Projects">
 								Projects
 							</a>
 						</div>

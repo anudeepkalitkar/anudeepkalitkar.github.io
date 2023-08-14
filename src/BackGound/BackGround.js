@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./BackGround.css";
 import { EducationInfo } from "../StaticInformation/EducationInfo";
 import { ExperienceInfo } from "../StaticInformation/ExperienceInfo";
@@ -61,7 +61,7 @@ const BackGround = (props) => {
 		);
 	});
 	return (
-		<section className="section">
+		<section className="section" id="Experience">
 			<h3 className="center ">Back Ground</h3>
 			<div className="row">
 				<div className="col s12 m6">
