@@ -13,9 +13,15 @@ const LikeAPI = "https://99kalitkar.in/Portfolio/likes.php?Blogname=";
 const Projects = (props) => {
 	const { darkMode, SetProjectId } = props;
 	const projectList = [];
+	const handleProjectRedirection =(event) =>{
+		event.preventDefault();
+		// console.log(event.target.id);
+		SetProjectId(event.target.id);
+	};
+
 	ProjectsInfo.forEach((project, key) => {
 		projectList.push(
-			<div className="row" key={key}>
+			<div className="row" key={"project"+key}>
 				<div className="col s12 m6 container">
 					<img className="responsive-img" src={project.coverImage} alt={project.title} />
 				</div>
@@ -29,8 +35,10 @@ const Projects = (props) => {
 							<a
 								className="btn green wave-effect center"
 								href={project.link}
+								id={key}
 								rel="noreferrer"
-								target="_blank">
+								target="_blank"
+								onClick={handleProjectRedirection}>
 								<i className="fas fa-laptop-code"></i> Explore more
 							</a>
 						</div>

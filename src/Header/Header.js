@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-import { DisplayPic } from "../StaticInformation/ImagesInfo";
+import { DisplayImage } from "../StaticInformation/ImagesInfo";
 import { HeaderInfo } from "../StaticInformation/AboutMeInfo";
 const Header = (props) => {
 	const { darkMode } = props;
@@ -13,7 +13,7 @@ const Header = (props) => {
 						{/* <h1 className="coder">&lt;Coder&gt;</h1> */}
 					</div>
 					<div className="col s12 m4">
-						<img className="hero" src={DisplayPic} alt="Me" />
+						<img className="hero" src={DisplayImage} alt="Me" />
 					</div>
 					<div className="col s12 m4">
 						{/* <h1 className="coder">&lt;DevOps&gt;</h1> */}

@@ -1,8 +1,18 @@
 import React from "react";
 import "./AboutMe.css";
 import { Introduction, JobSeeking } from "../StaticInformation/AboutMeInfo";
+import { SkillSetImages } from "../StaticInformation/ImagesInfo";
 const AboutMe = (props) => {
 	const { darkMode } = props;
+	const skillSetList = [];
+	SkillSetImages.forEach((skill, key) => {
+		skillSetList.push(
+			<div className="col s12 m2" key={"skillimage"+key}>
+				<img src={skill.imagePath} alt={skill.skill} />
+				{skill.skill}
+			</div>
+		);
+	});
 
 	return (
 		<section className="section">
@@ -24,82 +34,24 @@ const AboutMe = (props) => {
 					<div className="container ">
 						<h4 className="center section-title">My Skills</h4>
 						<div className="row center skills">
-							<div className="col s12 m2">
-								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="SkillSet" />
-								Python
-							</div>
-							<div className="col s12 m2">
-								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"alt="SkillSet" />
-								React
-							</div>
-							<div className="col s12 m2">
-								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="SkillSet"/>
-								Node.js
-							</div>
-							<div className="col s12 m2">
-								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"alt="SkillSet" />
-								JavaScript
-							</div>
-							<div className="col s12 m2">
-								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" alt="SkillSet"/>
-								Ruby
-							</div>
-							<div className="col s12 m2">
-								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="SkillSet"/>
-								C++
-							</div>
+							{skillSetList.slice(0, 6).map((item) => (
+								<div key={"skill"+item}>{item}</div>
+							))}
 						</div>
 						<div className="row center skills">
-							<div className="col s12 m2">
-								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg"alt="SkillSet" />
-								Go-Lang
-							</div>
-							<div className="col s12 m2">
-								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="SkillSet"/>
-								HTML
-							</div>
-							<div className="col s12 m2">
-								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="SkillSet"/>
-								CSS
-							</div>
-							<div className="col s12 m2">
-								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="SkillSet"/>
-								PhP
-							</div>
-							<div className="col s12 m2">
-								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt="SkillSet"/>
-								MySQL
-							</div>
-							<div className="col s12 m2">
-								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="SkillSet"/>
-								Bash
-							</div>
+							{skillSetList.slice(6, 12).map((item) => (
+								<div key={"skill"+item}>{item}</div>
+							))}
 						</div>
 						<div className="row center skills">
-							<div className="col s12 m2 skills">
-								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="SkillSet"/>
-								Git
-							</div>
-							<div className="col s12 m2">
-								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="SkillSet"/>
-								GitHub and GitOps
-							</div>
-							<div className="col s12 m2">
-								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"alt="SkillSet"/>
-								kubernetes
-							</div>
-							<div className="col s12 m2">
-								<img src="https://www.vectorlogo.zone/logos/terraformio/terraformio-icon.svg" alt="SkillSet"/>
-								Terraform
-							</div>
-							<div className="col s12 m2">
-								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="SkillSet"/>
-								Azure
-							</div>
-							<div className="col s12 m2">
-								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="SkillSet"/>
-								GCP
-							</div>
+							{skillSetList.slice(12, 18).map((item) => (
+								<div key={"skill"+item}>{item}</div>
+							))}
+						</div>
+						<div className="row center skills">
+							{skillSetList.slice(18, 24).map((item) => (
+								<div key={item}>{item}</div>
+							))}
 						</div>
 					</div>
 				</div>

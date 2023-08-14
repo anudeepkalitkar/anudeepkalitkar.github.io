@@ -8,7 +8,7 @@ const BackGround = (props) => {
 	const experienceList = [];
 	ExperienceInfo.forEach((exp, key) => {
 		experienceList.push(
-			<div key={key} className="section-inner card ">
+			<div key={"Exp"+key} className="section-inner card ">
 				<div className="card-content activator">
 					<span className="card-title activator">
 						<b>{exp.title}</b>
@@ -34,7 +34,7 @@ const BackGround = (props) => {
 	});
 	EducationInfo.forEach((edu, key) => {
 		educationList.push(
-			<div key={key} className="section-inner card">
+			<div key={"Edu"+key} className="section-inner card">
 				<div className="card-content activator">
 					<span className="card-title activator">
 						<b>{edu.Degree}</b>
