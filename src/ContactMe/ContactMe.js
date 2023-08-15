@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+import { EmailAPI } from "../StaticInformation/UrlLinkInfo";
 import "./ContactMe.css";
 const ContactMe = (props) => {
 	const { darkMode } = props;
-	const [formData, setFormData] = useState({ emailid: "", subject: "", message: "" });
+	const [formData, setFormData] = useState({ sendersEmailId: "", sendersSubject: "", sendersMessage: "" });
 	const handleChange = (event) => {
 		setFormData({
 			...formData,
 			[event.target.name]: event.target.value,
 		});
+
 	};
 	const handleSubmit = async (e) => {
 		e.preventDefault(formData);
@@ -17,13 +18,13 @@ const ContactMe = (props) => {
 		let email = {
 			method: "post",
 			contentType: "application/json",
-			url: "https://api.99kalitkar.in/email",
+			url: EmailAPI,
 			data: formData,
 		};
 		await axios(email).then(
 			(res) => {
 				if (res.data.success) {
-					alert("Email Sent!");
+					alert("Thanks for your Email. I will respond as soon as possible!");
 				}
 			},
 			(error) => console.log(error)
@@ -39,9 +40,9 @@ const ContactMe = (props) => {
 						<div className="input-field ">
 							<input
 								type="email"
-								name="emailid"
-								id="emailid"
-								value={formData.emailid}
+								name="sendersEmailId"
+								id="sendersEmailId"
+								value={formData.sendersEmailId}
 								onChange={handleChange}
 								required
 							/>
@@ -51,9 +52,9 @@ const ContactMe = (props) => {
 						<div className="input-field ">
 							<input
 								type="text"
-								name="subject"
-								id="subject"
-								value={formData.subject}
+								name="sendersSubject"
+								id="sendersSubject"
+								value={formData.sendersSubject}
 								onChange={handleChange}
 								required
 							/>
@@ -62,10 +63,10 @@ const ContactMe = (props) => {
 
 						<div className="input-field">
 							<textarea
-								id="message"
-								name="message"
+								id="sendersMessage"
+								name="sendersMessage"
 								className="materialize-textarea"
-								value={formData.message}
+								value={formData.sendersMessage}
 								onChange={handleChange}
 								required></textarea>
 							<label>Message</label>

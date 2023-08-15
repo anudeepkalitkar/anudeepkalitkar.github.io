@@ -1,14 +1,15 @@
-.body[data-theme="dark"]{
+/* .body[data-theme="dark"]{
     background: black;
     color: white ;
     font-family: "Lato", arial, sans-serif;
-}
+} */
 body{
     background: black;
     color: white ;
     font-family: "Lato", arial, sans-serif;
 
 }
+
 
 section {
     margin-top: 10px;

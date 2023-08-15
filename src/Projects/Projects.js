@@ -2,24 +2,24 @@ import React from "react";
 import axios from "axios";
 import "./Projects.css";
 import { ProjectsInfo } from "../StaticInformation/ProjectInfo";
-import {LikeAPI} from "../StaticInformation/UrlLinkInfo"
+import { LikeAPI } from "../StaticInformation/UrlLinkInfo";
 
 const Projects = (props) => {
 	const { darkMode, SetProjectId } = props;
 	const projectList = [];
-	const handleProjectRedirection =(event) =>{
+	const handleProjectRedirection = (event) => {
 		SetProjectId(event.target.id);
 	};
 
 	ProjectsInfo.forEach((project, key) => {
 		projectList.push(
-			<div className="row" key={"project"+key}>
+			<div className="row" key={"project" + key}>
 				<div className="col s12 m6 container">
 					<img className="responsive-img" src={project.coverImage} alt={project.title} />
 				</div>
 				<div className="col s12 m6">
 					<h4 className="">{project.title}</h4>
-					
+
 					<h6 className="project-intro">{project.intro}</h6>
 
 					<div className="row center">
@@ -38,9 +38,8 @@ const Projects = (props) => {
 							<button
 								className="btn blue wave-effect center"
 								onClick={() => {
-									postLike(project.like);
-								}}
-							>
+									handleLikes(project.like);
+								}}>
 								<i className="far fa-thumbs-up"></i> Like
 							</button>
 						</div>
@@ -50,23 +49,33 @@ const Projects = (props) => {
 		);
 	});
 
-	const postLike = async (proj) => {
-		let likes = {
-		  method: 'get',
-		  url: LikeAPI + proj,
-		  timeout: 4000
+	const handleLikes = async (projectliked) => {
+		let likeData = {
+			projectName : projectliked
 		}
-		await axios(likes).then(res => {
-		  console.log(res.data);
-		}, (error) => console.log(error));
-	  }
+		let likes = {
+			method: "post",
+			contentType: "application/json",
+			url: LikeAPI,
+			data: likeData,
+			// timeout: 4000,
+		};
+		await axios(likes).then(
+			(res) => {
+				if (res.data.success) {
+					alert("Thanks for your like!!");
+				}
+			},
+			
+			(error) => alert(likeData.projectName)
+		);
+	};
+
 	return (
 		<section className="section" id="Projects">
 			<h3 className="center ">Projects</h3>
 			<br></br>
-			<div className="container projects">
-			{projectList}
-			</div>
+			<div className="container projects">{projectList}</div>
 		</section>
 	);
 };
