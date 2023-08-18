@@ -3,7 +3,6 @@ import "./BackGround.css";
 import { EducationInfo } from "../StaticInformation/EducationInfo";
 import { ExperienceInfo } from "../StaticInformation/ExperienceInfo";
 const BackGround = (props) => {
-	const { darkMode } = props;
 	const educationList = [];
 	const experienceList = [];
 	ExperienceInfo.forEach((exp, key) => {

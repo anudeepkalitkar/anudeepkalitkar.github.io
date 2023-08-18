@@ -5,7 +5,7 @@ import { ProjectsInfo } from "../StaticInformation/ProjectInfo";
 import { LikeAPI } from "../StaticInformation/UrlLinkInfo";
 
 const Projects = (props) => {
-	const { darkMode, SetProjectId } = props;
+	const {  SetProjectId } = props;
 	const projectList = [];
 	const handleProjectRedirection = (event) => {
 		SetProjectId(event.target.id);

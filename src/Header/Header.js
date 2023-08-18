@@ -5,7 +5,6 @@ import { HeaderInfo } from "../StaticInformation/AboutMeInfo";
 import { linkedinUrl, githubUrl, gmailUrl, instagramUrl } from "../StaticInformation/UrlLinkInfo";
 
 const Header = (props) => {
-	const { darkMode } = props;
 
 	return (
 		<section>

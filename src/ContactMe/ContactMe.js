@@ -3,7 +3,6 @@ import axios from "axios";
 import { EmailAPI } from "../StaticInformation/UrlLinkInfo";
 import "./ContactMe.css";
 const ContactMe = (props) => {
-	const { darkMode } = props;
 	const [formData, setFormData] = useState({ sendersEmailId: "", sendersSubject: "", sendersMessage: "" });
 	const handleChange = (event) => {
 		setFormData({

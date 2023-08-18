@@ -10,15 +10,12 @@ import ProjectDescription from "./Projects/ProjectDescription";
 import Footer from "./Footer/Footer";
 
 function App() {
-	const [darkMode, SetDarkMode] = useState(true);
 	const [projectId, SetProjectId] = useState();
 	return (
 		<div className="body">
 			{projectId && (
 				<>
 					<ProjectDescription
-						darkMode={darkMode}
-						SetDarkMode={SetDarkMode}
 						projectId={projectId}
 						SetProjectId={SetProjectId}
 					/>
@@ -28,28 +25,29 @@ function App() {
 							<i className="large material-icons">arrow_upward</i>
 						</a>
 					</div>
-					<Footer darkMode={darkMode}></Footer>
+					<Footer ></Footer>
 				</>
 			)}
 			{!projectId && (
 				<>
 					<NavigationBar
-						darkMode={darkMode}
-						SetDarkMode={SetDarkMode}
+						
+						
 						SetProjectId={SetProjectId}
 					/>
-					<Header darkMode={darkMode} />
-					<AboutMe darkMode={darkMode}></AboutMe>
-					<BackGround darkMode={darkMode}></BackGround>
-					<Projects darkMode={darkMode} SetProjectId={SetProjectId}></Projects>
-					<ContactMe darkMode={darkMode}></ContactMe>
+					<Header  />
+					<AboutMe ></AboutMe>
+					<BackGround ></BackGround>
+					<Projects  SetProjectId={SetProjectId}></Projects>
+					<ContactMe ></ContactMe>
 
 					<div className="fixed-action-btn">
 						<a className="btn-floating btn-large red" href="#NavBar">
 							<i className="large material-icons">arrow_upward</i>
 						</a>
 					</div>
-					<Footer darkMode={darkMode}></Footer>
+					<Footer ></Footer>
+					
 				</>
 			)}
 		</div>

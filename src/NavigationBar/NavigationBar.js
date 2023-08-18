@@ -1,17 +1,11 @@
 import React, { useEffect } from "react";
 import "./NavigationBar.css";
 import M from "materialize-css";
+import { ResumePath } from "../StaticInformation/AboutMeInfo";
 
 const NavigationBar = (props) => {
-	const { darkMode, SetDarkMode, SetProjectId } = props;
+	const {SetProjectId } = props;
 
-	const handleMode = (e) => {
-		if (darkMode) {
-			SetDarkMode(false);
-		} else {
-			SetDarkMode(true);
-		}
-	};
 	useEffect(() => {
 		let sidenav = document.querySelector("#mobile-nav");
 		M.Sidenav.init(sidenav, {});
@@ -62,14 +56,8 @@ const NavigationBar = (props) => {
 						</li>
 
 						<li>
-							<div className="switch nav-item">
-								<label>
-									<input type="checkbox" checked={darkMode} onChange={handleMode} />
-									<span className="lever" ></span>
-									DarkMode
+						<a className="waves-effect waves-light btn green" target="_blank" href={ResumePath} rel="noreferrer">Resume</a>
 
-								</label>
-							</div>
 						</li>
 
 						<li>
@@ -108,6 +96,9 @@ const NavigationBar = (props) => {
 							<a href="#Contact" className="nav-item" onClick={handleNavOnClick}>
 								Contact Info
 							</a>
+						</li>
+						<li>
+							<a className="waves-effect waves-light btn green" target="_blank" href={ResumePath} rel="noreferrer">Resume</a>
 						</li>
 					</ul>
 				</div>

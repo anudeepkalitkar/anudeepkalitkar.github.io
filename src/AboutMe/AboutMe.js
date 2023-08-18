@@ -3,7 +3,6 @@ import "./AboutMe.css";
 import { Introduction, JobSeeking } from "../StaticInformation/AboutMeInfo";
 import { SkillSetImages } from "../StaticInformation/ImagesInfo";
 const AboutMe = (props) => {
-	const { darkMode } = props;
 	const skillSetList = [];
 	SkillSetImages.forEach((skill, key) => {
 		skillSetList.push(

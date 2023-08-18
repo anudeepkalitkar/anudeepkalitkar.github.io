@@ -19,3 +19,16 @@
 .btn {
     font-weight: bold;
 }
+
+
+@media screen and (max-width: 600px) {
+	.skills .col {
+		max-width: calc(33.33%);
+		max-height: calc(33.33%);
+/* 
+        min-width: calc(50%);
+		min-height: calc(50%); */
+	}
+
+     
+}

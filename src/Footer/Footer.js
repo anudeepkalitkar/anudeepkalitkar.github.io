@@ -1,11 +1,9 @@
 import React from "react";
 import "./Footer.css";
-import { DisplayImage } from "../StaticInformation/ImagesInfo";
 import { HeaderInfo } from "../StaticInformation/AboutMeInfo";
 import { linkedinUrl, githubUrl, gmailUrl, instagramUrl } from "../StaticInformation/UrlLinkInfo";
 
 const Footer = (props) => {
-	const { darkMode } = props;
 
 	return (
 		<footer>

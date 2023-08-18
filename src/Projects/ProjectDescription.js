@@ -1,18 +1,31 @@
 import React from "react";
-import axios from "axios";
 import "./ProjectDescription.css";
 import "../App.css";
 import NavigationBar from "../NavigationBar/NavigationBar";
 import { ProjectsInfo } from "../StaticInformation/ProjectInfo";
+import { SkillSetImages } from "../StaticInformation/ImagesInfo";
 const ProjectDescription = (props) => {
-	const { darkMode, SetDarkMode, projectId, SetProjectId } = props;
-	const projectDetails = ProjectsInfo[projectId ];
+	const { projectId, SetProjectId } = props;
+	const projectDetails = ProjectsInfo[projectId];
+	const toolsUsed = [];
+
+	projectDetails.tools.forEach((tool, key) => {
+		toolsUsed.push(
+			<div className="col s12 m1" key={"projectTools" + key}>
+				<img
+					src={SkillSetImages.find((skill) => skill.skill === tool).imagePath}
+					alt="SkillSet"
+				/>
+				{tool}
+			</div>
+		);
+	});
 	return (
 		<div className="body">
-			<NavigationBar darkMode={darkMode} SetDarkMode={SetDarkMode} SetProjectId={SetProjectId} />
+			<NavigationBar SetProjectId={SetProjectId} />
 
 			<section id="PD-header">
-				<div className="PD-header center" >
+				<div className="PD-header center">
 					<div className="row">
 						<div className="col s12 m12">
 							<div className="profile-content">
@@ -46,119 +59,39 @@ const ProjectDescription = (props) => {
 					<div className="container ">
 						<h4 className="section-title">Tools Used:</h4>
 						<div className="container ">
-							<div className="row center skills">
-								<div className="col s12 m1">
-									<img
-										src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-										alt="SkillSet"
-									/>
-									Python
-								</div>
-								<div className="col s12 m1">
-									<img
-										src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-										alt="SkillSet"
-									/>
-									React
-								</div>
-								<div className="col s12 m1">
-									<img
-										src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-										alt="SkillSet"
-									/>
-									Node.js
-								</div>
-								<div className="col s12 m1">
-									<img
-										src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-										alt="SkillSet"
-									/>
-									JavaScript
-								</div>
-								<div className="col s12 m1">
-									<img
-										src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg"
-										alt="SkillSet"
-									/>
-									Ruby
-								</div>
-								<div className="col s12 m1">
-									<img
-										src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
-										alt="SkillSet"
-									/>
-									C++
-								</div>
-
-								<div className="col s12 m1">
-									<img
-										src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg"
-										alt="SkillSet"
-									/>
-									Go-Lang
-								</div>
-								<div className="col s12 m1">
-									<img
-										src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-										alt="SkillSet"
-									/>
-									HTML
-								</div>
-								<div className="col s12 m1">
-									<img
-										src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-										alt="SkillSet"
-									/>
-									CSS
-								</div>
-								<div className="col s12 m1">
-									<img
-										src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
-										alt="SkillSet"
-									/>
-									PhP
-								</div>
-								<div className="col s12 m1">
-									<img
-										src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"
-										alt="SkillSet"
-									/>
-									MySQL
-								</div>
-								<div className="col s12 m1">
-									<img
-										src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg"
-										alt="SkillSet"
-									/>
-									Bash
-								</div>
-							</div>
+							<div className="row center skills"> {toolsUsed}</div>
 						</div>
 					</div>
 				</section>
 				<section className="section">
 					<div className="container ">
-					<h4 className="section-title">Links:</h4>
+						<h4 className="section-title">Links:</h4>
 
 						<div className=" row center">
 							<div className="col s12 m4">
-								<div className="profile-switch">
-									<a className="btn-large green" href={projectDetails.link}>
-										Live
-									</a>
-								</div>
+								{projectDetails.link && (
+									<div className="profile-switch">
+										<a className="btn-large green" href={projectDetails.link}>
+											Live
+										</a>
+									</div>
+								)}
 							</div>
 
 							<div className="col s12 m4">
-								<div className="profile-switch">
-									<a className="btn-large green" href={projectDetails.like}>
-										Code
-									</a>
-								</div>
+								{projectDetails.sourceCode && (
+									<div className="profile-switch">
+										<a
+											className="btn-large green"
+											href={projectDetails.sourceCode}>
+											Code
+										</a>
+									</div>
+								)}
 							</div>
 							<div className="col s12 m4">
 								<div className="profile-switch">
-									<a className="btn-large green" href={projectDetails.link}>
+									<a className="btn-large green" href="">
 										Back
 									</a>
 								</div>
