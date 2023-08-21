@@ -12,11 +12,20 @@ const ProjectDescription = (props) => {
 	projectDetails.tools.forEach((tool, key) => {
 		toolsUsed.push(
 			<div className="col s12 m1" key={"projectTools" + key}>
-				<img
-					src={SkillSetImages.find((skill) => skill.skill === tool).imagePath}
-					alt="SkillSet"
-				/>
-				{tool}
+				{SkillSetImages.find((skill) => skill.skill === tool) && (
+					<>
+						<img
+							src={SkillSetImages.find((skill) => skill.skill === tool).imagePath}
+							alt="SkillSet"
+						/>
+						{tool}
+					</>
+				)}
+				{!SkillSetImages.find((skill) => skill.skill === tool) && (
+					<div className="NoSkillImage">
+						<b>{tool}</b>
+					</div>
+				)}
 			</div>
 		);
 	});
