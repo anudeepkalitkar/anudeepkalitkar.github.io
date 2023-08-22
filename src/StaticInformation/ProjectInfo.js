@@ -21,10 +21,10 @@ const ProjectsInfo = [
 
 	},
 	{
-		title: "Maze The Game",
-		coverImage: "Images/MazeTheGame.png",
-		intro: "'Maze The Game' is a competitive multiplayer experience, challenging players to solve real-time generated mazes while interacting via an integrated chat window.",
-		description: "Dive into the labyrinthine world of 'Maze The Game', a unique multiplayer platform where players are not just solving mazes, but competing in real-time. As players navigate the intricacies of each dynamically generated maze, they're racing against each other, with live scoreboards keeping the competition fierce. But it's not all about rivalry; we've integrated a chat window, fostering interaction and camaraderie among players. Whether you're strategizing, seeking hints, or just engaging in friendly banter, the chat feature adds an interactive dimension to the game. It's not just about reaching the end of the maze, but the journey and connections made along the way. Join the challenge, enjoy the camaraderie, and may the best maze-solver win!",
+		title: "MazeGame",
+		coverImage: "Images/MazeGame.png",
+		intro: "'Maze Game' is a competitive multiplayer experience, challenging players to solve real-time generated mazes while interacting via an integrated chat window.",
+		description: "Dive into the labyrinthine world of 'Maze Game', a unique multiplayer platform where players are not just solving mazes, but competing in real-time. As players navigate the intricacies of each dynamically generated maze, they're racing against each other, with live scoreboards keeping the competition fierce. But it's not all about rivalry; we've integrated a chat window, fostering interaction and camaraderie among players. Whether you're strategizing, seeking hints, or just engaging in friendly banter, the chat feature adds an interactive dimension to the game. It's not just about reaching the end of the maze, but the journey and connections made along the way. Join the challenge, enjoy the camaraderie, and may the best maze-solver win!",
 		link: "https://anudeepkalitkar.github.io/MazeGame/",
 		like: "MazeGame",
 		tools:['React', 'Node.js'],
