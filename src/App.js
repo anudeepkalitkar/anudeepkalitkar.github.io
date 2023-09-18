@@ -9,7 +9,7 @@ import Projects from "./Projects/Projects";
 import LatestProject from "./Projects/LatestProject";
 import ProjectDescription from "./Projects/ProjectDescription";
 import Footer from "./Footer/Footer";
-import { ProjectsInfo, OnGoingProjectsInfo, LatestProjectInfo } from "./StaticInformation/ProjectInfo";
+import { ProjectsInfo, OnGoingProjectsInfo } from "./StaticInformation/ProjectInfo";
 
 function App() {
 	const [projectId, SetProjectId] = useState();
