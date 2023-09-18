@@ -3,9 +3,8 @@ import axios from "axios";
 import "./Projects.css";
 import { ProjectsInfo } from "../StaticInformation/ProjectInfo";
 import { LikeAPI } from "../StaticInformation/UrlLinkInfo";
-
 const Projects = (props) => {
-	const {  SetProjectId } = props;
+	const { SetProjectId } = props;
 	const projectList = [];
 	const handleProjectRedirection = (event) => {
 		SetProjectId(event.target.id);
@@ -51,14 +50,13 @@ const Projects = (props) => {
 
 	const handleLikes = async (projectliked) => {
 		let likeData = {
-			projectName : projectliked
-		}
+			projectName: projectliked,
+		};
 		let likes = {
 			method: "post",
 			contentType: "application/json",
 			url: LikeAPI,
 			data: likeData,
-			// timeout: 4000,
 		};
 		await axios(likes).then(
 			(res) => {
@@ -66,7 +64,7 @@ const Projects = (props) => {
 					alert("Thanks for your like!!");
 				}
 			},
-			
+
 			(error) => alert(likeData.projectName)
 		);
 	};
