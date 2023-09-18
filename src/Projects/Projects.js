@@ -1,16 +1,15 @@
 import React from "react";
 import axios from "axios";
 import "./Projects.css";
-import { ProjectsInfo } from "../StaticInformation/ProjectInfo";
 import { LikeAPI } from "../StaticInformation/UrlLinkInfo";
 const Projects = (props) => {
-	const { SetProjectId } = props;
+	const { SetProjectId, projectInfoList, projectType  } = props;
 	const projectList = [];
 	const handleProjectRedirection = (event) => {
 		SetProjectId(event.target.id);
 	};
 
-	ProjectsInfo.forEach((project, key) => {
+	projectInfoList.forEach((project, key) => {
 		projectList.push(
 			<div className="row" key={"project" + key}>
 				<div className="col s12 m6 container">
@@ -70,8 +69,8 @@ const Projects = (props) => {
 	};
 
 	return (
-		<section className="section" id="Projects">
-			<h3 className="center ">Projects</h3>
+		<section className="section" id={projectType}>
+			<h3 className="center ">{projectType}</h3>
 			<br></br>
 			<div className="container projects">{projectList}</div>
 		</section>

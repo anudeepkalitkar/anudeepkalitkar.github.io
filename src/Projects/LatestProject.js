@@ -9,44 +9,6 @@ const LatestProject = (props) => {
 		SetProjectId(event.target.id);
 	};
 
-	// ProjectsInfo.forEach((project, key) => {
-	// 	projectList.push(
-	// 		<div className="row" key={"project" + key}>
-	// 			<div className="col s12 m6 container">
-	// 				<img className="responsive-img" src={project.coverImage} alt={project.title} />
-	// 			</div>
-	// 			<div className="col s12 m6">
-	// 				<h4 className="">{project.title}</h4>
-
-	// 				<h6 className="project-intro">{project.intro}</h6>
-
-	// 				<div className="row center">
-	// 					<div className="col s12 m6">
-	// 						<a
-	// 							className="btn green wave-effect center"
-	// 							href="#PD-header"
-	// 							id={key}
-	// 							rel="noreferrer"
-	// 							onClick={handleProjectRedirection}>
-	// 							<i className="fas fa-laptop-code"></i> Explore more
-	// 						</a>
-	// 					</div>
-
-	// 					<div className="col s12 m6">
-	// 						<button
-	// 							className="btn blue wave-effect center"
-	// 							onClick={() => {
-	// 								handleLikes(project.like);
-	// 							}}>
-	// 							<i className="far fa-thumbs-up"></i> Like
-	// 						</button>
-	// 					</div>
-	// 				</div>
-	// 			</div>
-	// 		</div>
-	// 	);
-	// });
-
 	const handleLikes = async (projectliked) => {
 		let likeData = {
 			projectName: projectliked,

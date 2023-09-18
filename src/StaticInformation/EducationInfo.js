@@ -1,6 +1,6 @@
 const EducationInfo = [
     {
-      Degree: "Masters of Science",
+      Degree: "Master of Science",
       from: "University of Colorado, Denver",
       year: "Pursuing",
       major: "Computer Science",

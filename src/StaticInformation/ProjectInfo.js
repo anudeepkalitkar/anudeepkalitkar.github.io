@@ -29,33 +29,7 @@ const LatestProjectInfo = {
 };
 
 const OnGoingProjectsInfo = [
-	{
-		title: "Real-Time Road Sign Detection, Recognition, and Driver Guidance System",
-		coverImage: "Images/TrafficSign.jpg",
-		intro: `Developed a system using YOLOv7 and a two-layer neural network for real-time road sign detection and recognition with high accuracy.`,
-		description: `In the rapidly evolving landscape of autonomous driving and advanced driver assistance systems, the ability to accurately detect and recognize road signs in real-time is paramount. This project aimed to develop a state-of-the-art system capable of detecting road signs and subsequently categorizing them into distinct types, all in real-time.
-			The system was architected in two layers. The first layer focused on the detection of signboards, while the second was dedicated to classifying the detected signs into one of 47 distinct categories. Through rigorous iterations and model evaluations, the system achieved high accuracy, making it a potential candidate for integration into real-world driving assistance systems.
-			Detailed Breakdown:
-
-			Signboard Detection:
-			Initial trials were conducted using YOLOv3 and YOLOv5. However, after six iterative versions, YOLOv5 emerged as the optimal choice for signboard detection due to its superior performance metrics
-			The model's training parameters were meticulously configured using the train.py file from the YOLOv5 library
-			Performance tracking was done using metrics such as training loss, validation loss, object loss, boundary-box loss, and class loss. This rigorous evaluation allowed for the identification of areas of improvement, leading to hyperparameter tuning and model optimization
-			
-			Signboard Classification:
-			The journey began with a basic neural network model with a sigmoid activation function. However, the transition to ResNet significantly enhanced the classification results
-			The model was trained on a curated dataset comprising original and augmented images. The augmentation was achieved using advanced computer vision techniques, ensuring a robust training process
-			Continuous monitoring of training and validation losses facilitated further refinements, with techniques like model assembly and alternative backbone architectures being explored to elevate the system's performance
-			
-			Data Collection & Preprocessing:
-			The LISA dataset served as the foundation for the first layer of the model. The entire process of data acquisition and preprocessing was managed to ensure its suitability for training
-			For the second dataset, a combination of web scraping and manual curation was employed. Images were sourced from diverse platforms, including the http://www.trafficsign.us/ website
-			Advanced computer vision techniques were employed to augment the dataset, ensuring a comprehensive training process. Proper labeling and dataset preparation were paramount, ensuring the models were trained on high-quality data.`,
-		tools: ["Python", "TensorFlow", "YOLOv7"],
-		link: null,
-		like: "Road-Sign-Detection",
-		sourceCode: null,
-	},
+	
 	{
 		title: "Image Based Authentication System",
 		coverImage: "Images/IBAS-Icons.jpg",
@@ -92,35 +66,42 @@ const OnGoingProjectsInfo = [
 		tools: [],
 		sourceCode: null,
 	},
+	{
+		title: "Doodle-Images Based Authentication System",
+		coverImage: "Images/IBAS-Doodles.jpg",
+		intro: `Venturing into the realm of interactive user authentication, the Doodle-Images Based Authentication System offers a distinctive approach, allowing users to authenticate themselves through personally drawn doodles. Merging the power of visual memory with interactive design, users can bypass traditional password constraints, crafting a unique, yet intuitive, security experience. Developed with contemporary front-end technologies and powered by Python at the backend, this system marks a transformative shift in authentication paradigms.`,
+		description: `Existing System:
+		Traditional digital landscapes have been largely centered around the conventional email-password combination for user authentication. While some platforms have innovated with biometrics or smart cards, these methods pose challenges:
+
+		Cost Implications: Implementing biometrics or smart card systems frequently demands specialized infrastructure, thus raising cost concerns.
+
+		Practical Usability and Affordability: Advanced as they may be, the everyday applicability and affordability of these systems are debatable, given that not all users might possess the necessary devices or find them user-friendly.
+
+		Proposed Doodle-Images Based Authentication System:
+		This system redefines user authentication by integrating creativity and visual cues:
+
+		Canvas for Doodles at Registration:
+
+		During the initial setup, users are provided with a canvas, a dedicated space where they can unleash their creativity by drawing up to 5 unique doodles or sketches.
+		Conversion of Doodles to Images:
+
+		Post-drawing, these doodles are seamlessly converted into image formats, ready to be integrated into the authentication process.
+		Doodle-Based Login Process:
+
+		For login authentication, the user-drawn doodle images are presented alongside a collection of predetermined images, all randomly arranged within a grid format, be it a 10x10 matrix or four distinct 5x5 grids.
+		Users recognize and select their personal doodle images from this grid, allowing the system to authenticate their identity based on their selections.
+		Tech Stack:
+
+		The front-end, responsible for displaying the canvas and the image grid, is elegantly crafted using HTML, CSS, and JavaScript. The backend operations, which include doodle-to-image conversions and data processing, are efficiently handled by Python.
+		In conclusion, the Doodle-Images Based Authentication System epitomizes innovation in the realm of digital security. By fusing personal creativity with authentication processes, it offers users a tailored, engaging, and more intuitive access experience. As the digital realm becomes increasingly intricate, such pioneering solutions promise a secure, yet user-centered future.`,
+		link: null,
+		like: "IBAS-Doodles",
+		tools: [],
+		sourceCode: null,
+	},
 ];
 
 const ProjectsInfo = [
-	{
-		title: "News Classifier using Kafka",
-		coverImage: "Images/News_Classification.png",
-		intro: `Real-time news classification system to classify articles into different categories using NLP and ML algorithms. Utilized Kafka to consume, classify, and store news articles in real-time.`,
-		description: `The project aimed to develop a real-time news classification system capable of categorizing news articles from various sources into distinct categories such as politics, sports, entertainment, and more. With the rapid surge of online news content, there was a pressing need for an efficient system that could handle the classification task in real-time. The solution leveraged Kafka for real-time data streaming, ensuring the efficient ingestion and processing of news articles. Machine learning and natural language processing algorithms were employed to classify the articles based on their content. The classified articles were then stored in appropriate categories for easy retrieval and display.
-			Objectives:
-
-			Develop a real-time news classification system.
-			Classify news articles into distinct categories using machine learning and NLP algorithms.
-			Use Kafka to consume news articles in real-time.
-			Implement MLOps practices for continuous model improvement.
-			Design a user interface to display classified news articles in real-time.
-			
-			Results:
-
-			The system was capable of classifying news articles into different categories in real-time, offering an effective and scalable solution for news classification. The Logistic Regression model demonstrated the best overall performance in terms of accuracy and runtime. The project achieved a scalable and efficient real-time news classification system capable of handling large volumes of data.
-			Lessons Learned:
-			The project provided insights into the importance of data preprocessing, model selection, and evaluation, MLOps practices, and the challenges of handling real-time data. The team also learned the significance of selecting the right tools and techniques to address specific challenges.
-			Team Contributions:
-			The project was a collaborative effort, with each team member focusing on specific aspects. From researching data sources, handling real-time data streaming with Kafka, implementing NLP techniques for preprocessing, developing the machine learning pipeline, to designing the MongoDB storage solution and the front-end interface, every team member played a crucial role in the project's success.`,
-
-		tools: ["Kafka", "MongoDB", "NLP", "PySpark"],
-		link: null,
-		like: "News-Classification",
-		sourceCode: null,
-	},
 	{
 		title: "MazeGame",
 		coverImage: "Images/MazeGame.png",
@@ -147,6 +128,86 @@ const ProjectsInfo = [
 		link: "https://anudeepkalitkar.github.io/MazeGame/",
 		like: "MazeGame",
 		tools: ["React", "Node.js"],
+		sourceCode: null,
+	},
+	{
+		title: "Licence Plate Detection",
+		coverImage: "Images/License-Plate.png",
+		intro: `In today's fast-paced world, Automatic Vehicle Number Plate Recognition (ANPR) emerges as a critical tool for diverse traffic-related applications. Given the ubiquity of dash cameras in modern vehicles, the ability to harness and interpret this vast trove of continuous traffic data becomes paramount. From identifying stolen vehicles to retracing the steps of those involved in mishaps, the applications of ANPR are manifold.`,
+		description: `Significance of ANPR:
+		With ever-increasing vehicular traffic and the challenges posed by urbanization, there's a pressing need for technological interventions that can seamlessly integrate with the transportation ecosystem. ANPR fulfills this need by offering:
+
+		Traffic Management: Efficiently managing traffic congestions and bottlenecks.
+		Law Enforcement: Assisting in identifying violations, stolen vehicles, and providing critical insights during investigations.
+		Security: Enhancing security at check-posts, tolls, and sensitive areas by automatic vehicle identification.
+		Data Collection: Serving as a significant data collection point for urban planning and transportation departments.
+		Proposed System's Workflow:
+
+		High-Quality Image Capture: The initial step involves securing a distortion-free, clear image of the vehicle's number plate. This can be achieved by employing high-resolution cameras equipped with features like night vision and motion stabilization.
+
+		Plate Extraction Algorithm: Once the image is captured, the Plate Extraction algorithm is applied. This algorithm identifies and isolates the number plate area from the rest of the image, ensuring that what remains is a cropped image solely of the number plate, ready for the next step.
+
+		Optical Character Recognition (OCR): This is the heart of the ANPR system. OCR technology delves into the cropped image, deciphering and translating the characters on the plate into digital text. The accuracy of this step is crucial, given that even a slight misreading can lead to incorrect vehicle identification.
+
+		Database Cross-Verification: The derived license number isn't just displayed but is cross-referenced with a comprehensive database of registered vehicles. This step ensures that the system can flag anomalies, identify stolen vehicles, or assist in any other application where a vehicle's history or credentials need to be validated.
+
+		To encapsulate, the License Plate Detection system is an amalgamation of cutting-edge technology and vast databases, together providing an efficient, automated solution for vehicle recognition, bridging the gap between daily traffic data and actionable insights.`,
+		link: "https://anudeepkalitkar.github.io/Licence-Plate-Detection/",
+		like: "Licence-Plate-Detection",
+		tools: [],
+		sourceCode: null,
+	},
+	{
+		title: "Real-Time Road Sign Detection, Recognition, and Driver Guidance System",
+		coverImage: "Images/TrafficSign.jpg",
+		intro: `Developed a system using YOLOv7 and a two-layer neural network for real-time road sign detection and recognition with high accuracy.`,
+		description: `In the rapidly evolving landscape of autonomous driving and advanced driver assistance systems, the ability to accurately detect and recognize road signs in real-time is paramount. This project aimed to develop a state-of-the-art system capable of detecting road signs and subsequently categorizing them into distinct types, all in real-time.
+			The system was architected in two layers. The first layer focused on the detection of signboards, while the second was dedicated to classifying the detected signs into one of 47 distinct categories. Through rigorous iterations and model evaluations, the system achieved high accuracy, making it a potential candidate for integration into real-world driving assistance systems.
+			Detailed Breakdown:
+
+			Signboard Detection:
+			Initial trials were conducted using YOLOv3 and YOLOv5. However, after six iterative versions, YOLOv5 emerged as the optimal choice for signboard detection due to its superior performance metrics
+			The model's training parameters were meticulously configured using the train.py file from the YOLOv5 library
+			Performance tracking was done using metrics such as training loss, validation loss, object loss, boundary-box loss, and class loss. This rigorous evaluation allowed for the identification of areas of improvement, leading to hyperparameter tuning and model optimization
+			
+			Signboard Classification:
+			The journey began with a basic neural network model with a sigmoid activation function. However, the transition to ResNet significantly enhanced the classification results
+			The model was trained on a curated dataset comprising original and augmented images. The augmentation was achieved using advanced computer vision techniques, ensuring a robust training process
+			Continuous monitoring of training and validation losses facilitated further refinements, with techniques like model assembly and alternative backbone architectures being explored to elevate the system's performance
+			
+			Data Collection & Preprocessing:
+			The LISA dataset served as the foundation for the first layer of the model. The entire process of data acquisition and preprocessing was managed to ensure its suitability for training
+			For the second dataset, a combination of web scraping and manual curation was employed. Images were sourced from diverse platforms, including the http://www.trafficsign.us/ website
+			Advanced computer vision techniques were employed to augment the dataset, ensuring a comprehensive training process. Proper labeling and dataset preparation were paramount, ensuring the models were trained on high-quality data.`,
+		tools: ["Python", "TensorFlow", "YOLOv7"],
+		link: null,
+		like: "Road-Sign-Detection",
+		sourceCode: null,
+	},
+	{
+		title: "News Classifier using Kafka",
+		coverImage: "Images/News_Classification.png",
+		intro: `Real-time news classification system to classify articles into different categories using NLP and ML algorithms. Utilized Kafka to consume, classify, and store news articles in real-time.`,
+		description: `The project aimed to develop a real-time news classification system capable of categorizing news articles from various sources into distinct categories such as politics, sports, entertainment, and more. With the rapid surge of online news content, there was a pressing need for an efficient system that could handle the classification task in real-time. The solution leveraged Kafka for real-time data streaming, ensuring the efficient ingestion and processing of news articles. Machine learning and natural language processing algorithms were employed to classify the articles based on their content. The classified articles were then stored in appropriate categories for easy retrieval and display.
+			Objectives:
+
+			Develop a real-time news classification system.
+			Classify news articles into distinct categories using machine learning and NLP algorithms.
+			Use Kafka to consume news articles in real-time.
+			Implement MLOps practices for continuous model improvement.
+			Design a user interface to display classified news articles in real-time.
+			
+			Results:
+
+			The system was capable of classifying news articles into different categories in real-time, offering an effective and scalable solution for news classification. The Logistic Regression model demonstrated the best overall performance in terms of accuracy and runtime. The project achieved a scalable and efficient real-time news classification system capable of handling large volumes of data.
+			Lessons Learned:
+			The project provided insights into the importance of data preprocessing, model selection, and evaluation, MLOps practices, and the challenges of handling real-time data. The team also learned the significance of selecting the right tools and techniques to address specific challenges.
+			Team Contributions:
+			The project was a collaborative effort, with each team member focusing on specific aspects. From researching data sources, handling real-time data streaming with Kafka, implementing NLP techniques for preprocessing, developing the machine learning pipeline, to designing the MongoDB storage solution and the front-end interface, every team member played a crucial role in the project's success.`,
+
+		tools: ["Kafka", "MongoDB", "NLP", "PySpark"],
+		link: null,
+		like: "News-Classification",
 		sourceCode: null,
 	},
 	{
@@ -188,39 +249,7 @@ const ProjectsInfo = [
 		sourceCode: null,
 	},
 
-	{
-		title: "Doodle-Images Based Authentication System",
-		coverImage: "Images/IBAS-Doodles.jpg",
-		intro: `Venturing into the realm of interactive user authentication, the Doodle-Images Based Authentication System offers a distinctive approach, allowing users to authenticate themselves through personally drawn doodles. Merging the power of visual memory with interactive design, users can bypass traditional password constraints, crafting a unique, yet intuitive, security experience. Developed with contemporary front-end technologies and powered by Python at the backend, this system marks a transformative shift in authentication paradigms.`,
-		description: `Existing System:
-		Traditional digital landscapes have been largely centered around the conventional email-password combination for user authentication. While some platforms have innovated with biometrics or smart cards, these methods pose challenges:
-
-		Cost Implications: Implementing biometrics or smart card systems frequently demands specialized infrastructure, thus raising cost concerns.
-
-		Practical Usability and Affordability: Advanced as they may be, the everyday applicability and affordability of these systems are debatable, given that not all users might possess the necessary devices or find them user-friendly.
-
-		Proposed Doodle-Images Based Authentication System:
-		This system redefines user authentication by integrating creativity and visual cues:
-
-		Canvas for Doodles at Registration:
-
-		During the initial setup, users are provided with a canvas, a dedicated space where they can unleash their creativity by drawing up to 5 unique doodles or sketches.
-		Conversion of Doodles to Images:
-
-		Post-drawing, these doodles are seamlessly converted into image formats, ready to be integrated into the authentication process.
-		Doodle-Based Login Process:
-
-		For login authentication, the user-drawn doodle images are presented alongside a collection of predetermined images, all randomly arranged within a grid format, be it a 10x10 matrix or four distinct 5x5 grids.
-		Users recognize and select their personal doodle images from this grid, allowing the system to authenticate their identity based on their selections.
-		Tech Stack:
-
-		The front-end, responsible for displaying the canvas and the image grid, is elegantly crafted using HTML, CSS, and JavaScript. The backend operations, which include doodle-to-image conversions and data processing, are efficiently handled by Python.
-		In conclusion, the Doodle-Images Based Authentication System epitomizes innovation in the realm of digital security. By fusing personal creativity with authentication processes, it offers users a tailored, engaging, and more intuitive access experience. As the digital realm becomes increasingly intricate, such pioneering solutions promise a secure, yet user-centered future.`,
-		link: null,
-		like: "IBAS-Doodles",
-		tools: [],
-		sourceCode: null,
-	},
+	
 	{
 		title: "Image Similarity Based Authentication System",
 		coverImage: "Images/IBAS-IC.jpg",
@@ -286,44 +315,18 @@ const ProjectsInfo = [
 		sourceCode: null,
 	},
 
+	
 	{
-		title: "Licence Plate Detection",
-		coverImage: "Images/License-Plate.png",
-		intro: `In today's fast-paced world, Automatic Vehicle Number Plate Recognition (ANPR) emerges as a critical tool for diverse traffic-related applications. Given the ubiquity of dash cameras in modern vehicles, the ability to harness and interpret this vast trove of continuous traffic data becomes paramount. From identifying stolen vehicles to retracing the steps of those involved in mishaps, the applications of ANPR are manifold.`,
-		description: `Significance of ANPR:
-		With ever-increasing vehicular traffic and the challenges posed by urbanization, there's a pressing need for technological interventions that can seamlessly integrate with the transportation ecosystem. ANPR fulfills this need by offering:
-
-		Traffic Management: Efficiently managing traffic congestions and bottlenecks.
-		Law Enforcement: Assisting in identifying violations, stolen vehicles, and providing critical insights during investigations.
-		Security: Enhancing security at check-posts, tolls, and sensitive areas by automatic vehicle identification.
-		Data Collection: Serving as a significant data collection point for urban planning and transportation departments.
-		Proposed System's Workflow:
-
-		High-Quality Image Capture: The initial step involves securing a distortion-free, clear image of the vehicle's number plate. This can be achieved by employing high-resolution cameras equipped with features like night vision and motion stabilization.
-
-		Plate Extraction Algorithm: Once the image is captured, the Plate Extraction algorithm is applied. This algorithm identifies and isolates the number plate area from the rest of the image, ensuring that what remains is a cropped image solely of the number plate, ready for the next step.
-
-		Optical Character Recognition (OCR): This is the heart of the ANPR system. OCR technology delves into the cropped image, deciphering and translating the characters on the plate into digital text. The accuracy of this step is crucial, given that even a slight misreading can lead to incorrect vehicle identification.
-
-		Database Cross-Verification: The derived license number isn't just displayed but is cross-referenced with a comprehensive database of registered vehicles. This step ensures that the system can flag anomalies, identify stolen vehicles, or assist in any other application where a vehicle's history or credentials need to be validated.
-
-		To encapsulate, the License Plate Detection system is an amalgamation of cutting-edge technology and vast databases, together providing an efficient, automated solution for vehicle recognition, bridging the gap between daily traffic data and actionable insights.`,
-		link: "https://anudeepkalitkar.github.io/Licence-Plate-Detection/",
-		like: "Licence-Plate-Detection",
+		title: "Man-Machine Interface for SRD Chipset",
+		coverImage: "Images/LMSgui.png",
+		intro: "Our project focuses on creating a GUI-based man-machine interface for an SDR chipset, enabling users to modify specific register bits and view the resulting outcomes of input combinations.",
+		description:
+			"The Man-Machine Interface for the SDR Chipset project is a pioneering initiative that seamlessly blends the complexities of Software Defined Radio (SDR) chipsets with user-friendly interactions. At its core, the project offers a Graphical User Interface (GUI) that empowers users to easily enable specific bits within designated registers, eliminating the need for intricate coding or manual adjustments. Additionally, the system provides an intuitive interface that displays the outcomes of various input combinations in the registers, offering immediate feedback for understanding and troubleshooting. This innovative approach not only democratizes access to SDR configurations but also streamlines development and testing processes, making it an invaluable tool for both novices and experts in the field.",
+		link: null,
+		like: "LMS6002D",
 		tools: [],
 		sourceCode: null,
 	},
-	// {
-	// 	title: "Man-Machine Interface for SRD Chipset",
-	// 	coverImage: "LMSgui.png",
-	// 	intro: "Our project focuses on creating a GUI-based man-machine interface for an SDR chipset, enabling users to modify specific register bits and view the resulting outcomes of input combinations.",
-	// 	description:
-	// 		"The Man-Machine Interface for the SDR Chipset project is a pioneering initiative that seamlessly blends the complexities of Software Defined Radio (SDR) chipsets with user-friendly interactions. At its core, the project offers a Graphical User Interface (GUI) that empowers users to easily enable specific bits within designated registers, eliminating the need for intricate coding or manual adjustments. Additionally, the system provides an intuitive interface that displays the outcomes of various input combinations in the registers, offering immediate feedback for understanding and troubleshooting. This innovative approach not only democratizes access to SDR configurations but also streamlines development and testing processes, making it an invaluable tool for both novices and experts in the field.",
-	// 	link: null,
-	// 	like: "LMS6002D",
-	// 	tools: [],
-	// 	sourceCode: null,
-	// },
 ];
 
-export { ProjectsInfo, LatestProjectInfo };
+export { ProjectsInfo, LatestProjectInfo, OnGoingProjectsInfo };

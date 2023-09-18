@@ -9,6 +9,7 @@ import Projects from "./Projects/Projects";
 import LatestProject from "./Projects/LatestProject";
 import ProjectDescription from "./Projects/ProjectDescription";
 import Footer from "./Footer/Footer";
+import { ProjectsInfo, OnGoingProjectsInfo, LatestProjectInfo } from "./StaticInformation/ProjectInfo";
 
 function App() {
 	const [projectId, SetProjectId] = useState();
@@ -16,40 +17,33 @@ function App() {
 		<div className="body">
 			{projectId && (
 				<>
-					<ProjectDescription
-						projectId={projectId}
-						SetProjectId={SetProjectId}
-					/>
+					<ProjectDescription projectId={projectId} SetProjectId={SetProjectId} />
 
 					<div className="fixed-action-btn">
 						<a className="btn-floating btn-large red" href="#NavBar">
 							<i className="large material-icons">arrow_upward</i>
 						</a>
 					</div>
-					<Footer ></Footer>
+					<Footer></Footer>
 				</>
 			)}
 			{!projectId && (
 				<>
-					<NavigationBar
-						
-						
-						SetProjectId={SetProjectId}
-					/>
-					<Header  />
-					<AboutMe ></AboutMe>
-					<BackGround ></BackGround>
-					<LatestProject  SetProjectId={SetProjectId}></LatestProject>
-					<Projects  SetProjectId={SetProjectId}></Projects>
-					<ContactMe ></ContactMe>
+					<NavigationBar SetProjectId={SetProjectId} />
+					<Header />
+					<AboutMe></AboutMe>
+					<BackGround></BackGround>
+					<LatestProject SetProjectId={SetProjectId}></LatestProject>
+					<Projects SetProjectId={SetProjectId} projectInfoList = {OnGoingProjectsInfo} projectType ="On Going Projects"></Projects>
+					<Projects SetProjectId={SetProjectId} projectInfoList = {ProjectsInfo} projectType ="Projects"></Projects>
+					<ContactMe></ContactMe>
 
 					<div className="fixed-action-btn">
 						<a className="btn-floating btn-large red" href="#NavBar">
 							<i className="large material-icons">arrow_upward</i>
 						</a>
 					</div>
-					<Footer ></Footer>
-					
+					<Footer></Footer>
 				</>
 			)}
 		</div>
