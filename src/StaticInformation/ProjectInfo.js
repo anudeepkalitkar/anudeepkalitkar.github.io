@@ -28,7 +28,7 @@ const LatestProjectInfo = {
 	sourceCode: null,
 };
 
-const ProjectsInfo = [
+const OnGoingProjectsInfo = [
 	{
 		title: "Real-Time Road Sign Detection, Recognition, and Driver Guidance System",
 		coverImage: "Images/TrafficSign.jpg",
@@ -56,7 +56,45 @@ const ProjectsInfo = [
 		like: "Road-Sign-Detection",
 		sourceCode: null,
 	},
+	{
+		title: "Image Based Authentication System",
+		coverImage: "Images/IBAS-Icons.jpg",
+		intro: `Breaking away from the constraints of traditional alphanumeric passwords, the Image-Based Authentication System introduces a novel, intuitive way for users to secure their credentials. Harnessing the power of visual memory, this system invites users to authenticate using sequences of images, offering not only enhanced security but also an effortless user experience. Crafted using cutting-edge front-end technologies and powered by PHP at the backend, this system paves the way for a new era of authentication.`,
+		description: `Existing System:
+		The landscape of digital authentication has been predominantly dominated by the standard email-password combination. Some platforms have ventured into advanced mechanisms like biometrics or smart cards. However, while they do offer heightened security, concerns arise:
 
+		Cost Implications: Implementing biometrics or smart card authentication often requires specialized hardware or software, escalating the overall costs.
+
+		Usability and Affordability: While these systems are technologically advanced, their everyday practicality and accessibility for the average user remain in question. Not everyone might have access to the required devices or find them convenient.
+
+		Proposed Image-Based Authentication System:
+		This system is an innovative leap, shifting the paradigm of authentication:
+
+		Visual Grid of Images:
+
+		During the registration or setup phase, users are presented with a grid filled with predetermined images or icons. Depending on the implementation, this could be a 10x10 grid or four 5x5 grids.
+		A diverse array of image sets are utilized, ranging from common icons to mnemonic symbols and even Telugu alphabets, catering to a broad user base.
+		Image Sequence as Password:
+
+		Users authenticate themselves by selecting a specific sequence of images from the grid. This sequence, while intuitive for the user to remember, acts as their unique "password."
+		Unique Hash Generation:
+
+		As users define their image sequence, the system, in the background, translates this sequence into a unique hash value. This value, representing the user's chosen sequence, is then stored securely in the database.
+		Simplified Login Process:
+
+		When logging in, users simply need to replicate their chosen image sequence. Given the visual nature of images, users often find this method more memorable and intuitive than traditional passwords.
+		Tech Stack:
+
+		The frontend elegantly displays the grid and captures user inputs using a combination of HTML, CSS, and JavaScript. In contrast, the backend, powered by PHP, efficiently processes the data, generates the hashes, and manages the database interactions.
+		In essence, the Image-Based Authentication System seamlessly merges usability with security. By anchoring the authentication process in visual memory, it not only simplifies user access but also offers a fresh, interactive approach to digital security. As cyber threats evolve, it's innovations like these that promise a safer, user-friendly digital future.`,
+		link: null,
+		like: "IBAS-Icons",
+		tools: [],
+		sourceCode: null,
+	},
+];
+
+const ProjectsInfo = [
 	{
 		title: "News Classifier using Kafka",
 		coverImage: "Images/News_Classification.png",
@@ -84,35 +122,33 @@ const ProjectsInfo = [
 		sourceCode: null,
 	},
 	{
-		title: "Smart Traffic Control Sytem",
-		coverImage: "Images/SmartTraffic.jpg",
-		intro: `Traffic congestion is one of the major modern-day crises in every big city in the world.
-		Edge detection technique is imperative to extract the required traffic information from the CCTV footage.
-		By defining the threshold level of vehicle count one can manage the traffic.`,
-		description: `Existing System:
-		Traditional traffic management systems largely depend on human intervention. Traffic police or personnel manually observe the vehicular build-up at intersections and control signals, adjusting the green-light duration based on the perceived volume of traffic. While such systems have been functional for years, they come with a plethora of challenges:
+		title: "MazeGame",
+		coverImage: "Images/MazeGame.png",
+		intro: `Enter the "Maze Game" competitive world, a multiplayer quest where players are plunged into a real-time race of wit and strategy rather than just navigating mazes.
+		Amplifying the thrill is an embedded chat window, turning competitors into comrades.`,
+		description: `Maze Game - Where Competition Meets Camaraderie:
 
-		Inefficiency: Human assessment might not always accurately gauge the severity of traffic build-up.
-		Increased Manpower Requirement: Constant monitoring requires substantial manpower, which may not be a viable solution for every city or intersection.
-		Reactivity: These systems are often reactive, addressing the problem after it has already occurred, rather than proactively managing the flow.
-		Proposed System:
-		The contemporary approach involves an automated, image-processing-based solution designed to alleviate the shortcomings of the manual systems. The core workings of this system are as follows:
+		The "Maze Game" isn't just another puzzle-solving experience. It's a universe where the labyrinthine twists and turns come alive, testing not just your navigation skills, but also your agility in racing against real players. Here's a deeper dive into what sets it apart:
 
-		Image Capture: Strategically installed cameras at intersections continually capture real-time images of traffic approaching from all directions.
+		Dynamic Maze Generation:
 
-		Data Transfer and Storage: These images are then transferred to a centralized database for further processing. This not only aids in immediate traffic management but also serves as a rich dataset for future analytics and predictive modeling.
+		Every game presents a fresh challenge. Mazes are procedurally generated in real-time, ensuring no two games are alike. This unpredictability keeps players constantly on their toes and ready for a novel challenge.
+		Real-time Competition:
 
-		Image Processing: Post data acquisition, the real magic happens. Advanced algorithms process these images to determine the density of vehicles. This is achieved primarily through edge detection techniques that identify the number and position of vehicles in each image.
+		The game transforms a solitary experience into a thrilling race. As you make your way through the winding paths, live scoreboards add an edge to the gameplay, nudging players to not just solve, but to solve faster.
+		Integrated Chat Window:
 
-		Signal Adjustment: Depending on the calculated density, the system intelligently adjusts the duration of the green and red lights at the signal. For instance, if the northward approach at an intersection is denser than the eastward approach, the system would allocate a longer green signal duration for the north.
+		Amidst the competitive fervor, the game introduces a touch of camaraderie. The chat window serves as a space for players to interact, share, and connect.
+		Whether you're in the mood for some light-hearted banter, need a hint from a fellow player, or want to discuss strategies, the chat fosters a sense of community. It's here that competitors can morph into allies, even if it's just for a game.
+		Beyond Just Winning:
 
-		Through such a system, cities can look forward to a more streamlined, efficient, and proactive approach to traffic management. The system's automation not only reduces the need for constant human monitoring but also ensures more accurate and timely adjustments to traffic signals, fostering smoother traffic flows and potentially reducing congestion-related issues.`,
-		link: "https://anudeepkalitkar.github.io/Smart-Traffic-Contorl-System",
-		like: "SmartTrafficControlSytem",
-		tools: ["Python", "React", "Node.js", "OpenCV"],
+		While emerging as the top maze-solver is a thrill in itself, "Maze Game" offers a richer experience. It's about the exhilarating journey, the unexpected turns, and the bonds forged in the chat rooms. The end of the maze is just one goal; the real win lies in the connections made and the fun had along the way.
+		In conclusion, "Maze Game" beckons players into a world where mazes aren't just puzzles, but arenas of competition, strategy, and connection. It's a game that champions the spirit of community even in the midst of rivalry. Join the maze, relish the challenges, and celebrate the shared joy of gaming!`,
+		link: "https://anudeepkalitkar.github.io/MazeGame/",
+		like: "MazeGame",
+		tools: ["React", "Node.js"],
 		sourceCode: null,
 	},
-
 	{
 		title: "Indoor Navigation",
 		coverImage: "Images/Indoor.png",
@@ -152,71 +188,6 @@ const ProjectsInfo = [
 		sourceCode: null,
 	},
 
-	{
-		title: "MazeGame",
-		coverImage: "Images/MazeGame.png",
-		intro: `Enter the "Maze Game" competitive world, a multiplayer quest where players are plunged into a real-time race of wit and strategy rather than just navigating mazes.
-		Amplifying the thrill is an embedded chat window, turning competitors into comrades.`,
-		description: `Maze Game - Where Competition Meets Camaraderie:
-
-		The "Maze Game" isn't just another puzzle-solving experience. It's a universe where the labyrinthine twists and turns come alive, testing not just your navigation skills, but also your agility in racing against real players. Here's a deeper dive into what sets it apart:
-
-		Dynamic Maze Generation:
-
-		Every game presents a fresh challenge. Mazes are procedurally generated in real-time, ensuring no two games are alike. This unpredictability keeps players constantly on their toes and ready for a novel challenge.
-		Real-time Competition:
-
-		The game transforms a solitary experience into a thrilling race. As you make your way through the winding paths, live scoreboards add an edge to the gameplay, nudging players to not just solve, but to solve faster.
-		Integrated Chat Window:
-
-		Amidst the competitive fervor, the game introduces a touch of camaraderie. The chat window serves as a space for players to interact, share, and connect.
-		Whether you're in the mood for some light-hearted banter, need a hint from a fellow player, or want to discuss strategies, the chat fosters a sense of community. It's here that competitors can morph into allies, even if it's just for a game.
-		Beyond Just Winning:
-
-		While emerging as the top maze-solver is a thrill in itself, "Maze Game" offers a richer experience. It's about the exhilarating journey, the unexpected turns, and the bonds forged in the chat rooms. The end of the maze is just one goal; the real win lies in the connections made and the fun had along the way.
-		In conclusion, "Maze Game" beckons players into a world where mazes aren't just puzzles, but arenas of competition, strategy, and connection. It's a game that champions the spirit of community even in the midst of rivalry. Join the maze, relish the challenges, and celebrate the shared joy of gaming!`,
-		link: "https://anudeepkalitkar.github.io/MazeGame/",
-		like: "MazeGame",
-		tools: ["React", "Node.js"],
-		sourceCode: null,
-	},
-
-	{
-		title: "Image Based Authentication System",
-		coverImage: "Images/IBAS-Icons.jpg",
-		intro: `Breaking away from the constraints of traditional alphanumeric passwords, the Image-Based Authentication System introduces a novel, intuitive way for users to secure their credentials. Harnessing the power of visual memory, this system invites users to authenticate using sequences of images, offering not only enhanced security but also an effortless user experience. Crafted using cutting-edge front-end technologies and powered by PHP at the backend, this system paves the way for a new era of authentication.`,
-		description: `Existing System:
-		The landscape of digital authentication has been predominantly dominated by the standard email-password combination. Some platforms have ventured into advanced mechanisms like biometrics or smart cards. However, while they do offer heightened security, concerns arise:
-
-		Cost Implications: Implementing biometrics or smart card authentication often requires specialized hardware or software, escalating the overall costs.
-
-		Usability and Affordability: While these systems are technologically advanced, their everyday practicality and accessibility for the average user remain in question. Not everyone might have access to the required devices or find them convenient.
-
-		Proposed Image-Based Authentication System:
-		This system is an innovative leap, shifting the paradigm of authentication:
-
-		Visual Grid of Images:
-
-		During the registration or setup phase, users are presented with a grid filled with predetermined images or icons. Depending on the implementation, this could be a 10x10 grid or four 5x5 grids.
-		A diverse array of image sets are utilized, ranging from common icons to mnemonic symbols and even Telugu alphabets, catering to a broad user base.
-		Image Sequence as Password:
-
-		Users authenticate themselves by selecting a specific sequence of images from the grid. This sequence, while intuitive for the user to remember, acts as their unique "password."
-		Unique Hash Generation:
-
-		As users define their image sequence, the system, in the background, translates this sequence into a unique hash value. This value, representing the user's chosen sequence, is then stored securely in the database.
-		Simplified Login Process:
-
-		When logging in, users simply need to replicate their chosen image sequence. Given the visual nature of images, users often find this method more memorable and intuitive than traditional passwords.
-		Tech Stack:
-
-		The frontend elegantly displays the grid and captures user inputs using a combination of HTML, CSS, and JavaScript. In contrast, the backend, powered by PHP, efficiently processes the data, generates the hashes, and manages the database interactions.
-		In essence, the Image-Based Authentication System seamlessly merges usability with security. By anchoring the authentication process in visual memory, it not only simplifies user access but also offers a fresh, interactive approach to digital security. As cyber threats evolve, it's innovations like these that promise a safer, user-friendly digital future.`,
-		link: null,
-		like: "IBAS-Icons",
-		tools: [],
-		sourceCode: null,
-	},
 	{
 		title: "Doodle-Images Based Authentication System",
 		coverImage: "Images/IBAS-Doodles.jpg",
@@ -355,4 +326,4 @@ const ProjectsInfo = [
 	// },
 ];
 
-export { ProjectsInfo,LatestProjectInfo };
+export { ProjectsInfo, LatestProjectInfo };
