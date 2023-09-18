@@ -1,5 +1,34 @@
+const LatestProjectInfo = {
+	title: "Smart Traffic Control Sytem",
+	coverImage: "Images/SmartTraffic.jpg",
+	intro: `Traffic congestion is one of the major modern-day crises in every big city in the world.
+		Edge detection technique is imperative to extract the required traffic information from the CCTV footage.
+		By defining the threshold level of vehicle count one can manage the traffic.`,
+	description: `Existing System:
+		Traditional traffic management systems largely depend on human intervention. Traffic police or personnel manually observe the vehicular build-up at intersections and control signals, adjusting the green-light duration based on the perceived volume of traffic. While such systems have been functional for years, they come with a plethora of challenges:
+
+		Inefficiency: Human assessment might not always accurately gauge the severity of traffic build-up.
+		Increased Manpower Requirement: Constant monitoring requires substantial manpower, which may not be a viable solution for every city or intersection.
+		Reactivity: These systems are often reactive, addressing the problem after it has already occurred, rather than proactively managing the flow.
+		Proposed System:
+		The contemporary approach involves an automated, image-processing-based solution designed to alleviate the shortcomings of the manual systems. The core workings of this system are as follows:
+
+		Image Capture: Strategically installed cameras at intersections continually capture real-time images of traffic approaching from all directions.
+
+		Data Transfer and Storage: These images are then transferred to a centralized database for further processing. This not only aids in immediate traffic management but also serves as a rich dataset for future analytics and predictive modeling.
+
+		Image Processing: Post data acquisition, the real magic happens. Advanced algorithms process these images to determine the density of vehicles. This is achieved primarily through edge detection techniques that identify the number and position of vehicles in each image.
+
+		Signal Adjustment: Depending on the calculated density, the system intelligently adjusts the duration of the green and red lights at the signal. For instance, if the northward approach at an intersection is denser than the eastward approach, the system would allocate a longer green signal duration for the north.
+
+		Through such a system, cities can look forward to a more streamlined, efficient, and proactive approach to traffic management. The system's automation not only reduces the need for constant human monitoring but also ensures more accurate and timely adjustments to traffic signals, fostering smoother traffic flows and potentially reducing congestion-related issues.`,
+	link: "https://anudeepkalitkar.github.io/Smart-Traffic-Contorl-System",
+	like: "SmartTrafficControlSytem",
+	tools: ["Python", "React", "Node.js", "OpenCV"],
+	sourceCode: null,
+};
+
 const ProjectsInfo = [
-	
 	{
 		title: "Real-Time Road Sign Detection, Recognition, and Driver Guidance System",
 		coverImage: "Images/TrafficSign.jpg",
@@ -326,4 +355,4 @@ const ProjectsInfo = [
 	// },
 ];
 
-export { ProjectsInfo };
+export { ProjectsInfo,LatestProjectInfo };

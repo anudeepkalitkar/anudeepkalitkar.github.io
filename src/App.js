@@ -6,6 +6,7 @@ import AboutMe from "./AboutMe/AboutMe";
 import BackGround from "./BackGound/BackGround";
 import ContactMe from "./ContactMe/ContactMe";
 import Projects from "./Projects/Projects";
+import LatestProject from "./Projects/LatestProject";
 import ProjectDescription from "./Projects/ProjectDescription";
 import Footer from "./Footer/Footer";
 
@@ -38,6 +39,7 @@ function App() {
 					<Header  />
 					<AboutMe ></AboutMe>
 					<BackGround ></BackGround>
+					<LatestProject  SetProjectId={SetProjectId}></LatestProject>
 					<Projects  SetProjectId={SetProjectId}></Projects>
 					<ContactMe ></ContactMe>
 
