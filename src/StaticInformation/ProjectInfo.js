@@ -1,107 +1,33 @@
-const LatestProjectInfo = {
-	title: "Smart Traffic Control Sytem",
-	coverImage: "Images/SmartTraffic.jpg",
-	intro: `Traffic congestion is one of the major modern-day crises in every big city in the world.
-		Edge detection technique is imperative to extract the required traffic information from the CCTV footage.
-		By defining the threshold level of vehicle count one can manage the traffic.`,
-	description: `Existing System:
-		Traditional traffic management systems largely depend on human intervention. Traffic police or personnel manually observe the vehicular build-up at intersections and control signals, adjusting the green-light duration based on the perceived volume of traffic. While such systems have been functional for years, they come with a plethora of challenges:
-
-		Inefficiency: Human assessment might not always accurately gauge the severity of traffic build-up.
-		Increased Manpower Requirement: Constant monitoring requires substantial manpower, which may not be a viable solution for every city or intersection.
-		Reactivity: These systems are often reactive, addressing the problem after it has already occurred, rather than proactively managing the flow.
-		Proposed System:
-		The contemporary approach involves an automated, image-processing-based solution designed to alleviate the shortcomings of the manual systems. The core workings of this system are as follows:
-
-		Image Capture: Strategically installed cameras at intersections continually capture real-time images of traffic approaching from all directions.
-
-		Data Transfer and Storage: These images are then transferred to a centralized database for further processing. This not only aids in immediate traffic management but also serves as a rich dataset for future analytics and predictive modeling.
-
-		Image Processing: Post data acquisition, the real magic happens. Advanced algorithms process these images to determine the density of vehicles. This is achieved primarily through edge detection techniques that identify the number and position of vehicles in each image.
-
-		Signal Adjustment: Depending on the calculated density, the system intelligently adjusts the duration of the green and red lights at the signal. For instance, if the northward approach at an intersection is denser than the eastward approach, the system would allocate a longer green signal duration for the north.
-
-		Through such a system, cities can look forward to a more streamlined, efficient, and proactive approach to traffic management. The system's automation not only reduces the need for constant human monitoring but also ensures more accurate and timely adjustments to traffic signals, fostering smoother traffic flows and potentially reducing congestion-related issues.`,
-	link: "https://anudeepkalitkar.github.io/Smart-Traffic-Contorl-System",
-	like: "SmartTrafficControlSytem",
-	tools: ["Python", "React", "Node.js", "OpenCV"],
-	sourceCode: null,
-};
-
-const OnGoingProjectsInfo = [
-	
-	{
-		title: "Image Based Authentication System",
-		coverImage: "Images/IBAS-Icons.jpg",
-		intro: `Breaking away from the constraints of traditional alphanumeric passwords, the Image-Based Authentication System introduces a novel, intuitive way for users to secure their credentials. Harnessing the power of visual memory, this system invites users to authenticate using sequences of images, offering not only enhanced security but also an effortless user experience. Crafted using cutting-edge front-end technologies and powered by PHP at the backend, this system paves the way for a new era of authentication.`,
-		description: `Existing System:
-		The landscape of digital authentication has been predominantly dominated by the standard email-password combination. Some platforms have ventured into advanced mechanisms like biometrics or smart cards. However, while they do offer heightened security, concerns arise:
-
-		Cost Implications: Implementing biometrics or smart card authentication often requires specialized hardware or software, escalating the overall costs.
-
-		Usability and Affordability: While these systems are technologically advanced, their everyday practicality and accessibility for the average user remain in question. Not everyone might have access to the required devices or find them convenient.
-
-		Proposed Image-Based Authentication System:
-		This system is an innovative leap, shifting the paradigm of authentication:
-
-		Visual Grid of Images:
-
-		During the registration or setup phase, users are presented with a grid filled with predetermined images or icons. Depending on the implementation, this could be a 10x10 grid or four 5x5 grids.
-		A diverse array of image sets are utilized, ranging from common icons to mnemonic symbols and even Telugu alphabets, catering to a broad user base.
-		Image Sequence as Password:
-
-		Users authenticate themselves by selecting a specific sequence of images from the grid. This sequence, while intuitive for the user to remember, acts as their unique "password."
-		Unique Hash Generation:
-
-		As users define their image sequence, the system, in the background, translates this sequence into a unique hash value. This value, representing the user's chosen sequence, is then stored securely in the database.
-		Simplified Login Process:
-
-		When logging in, users simply need to replicate their chosen image sequence. Given the visual nature of images, users often find this method more memorable and intuitive than traditional passwords.
-		Tech Stack:
-
-		The frontend elegantly displays the grid and captures user inputs using a combination of HTML, CSS, and JavaScript. In contrast, the backend, powered by PHP, efficiently processes the data, generates the hashes, and manages the database interactions.
-		In essence, the Image-Based Authentication System seamlessly merges usability with security. By anchoring the authentication process in visual memory, it not only simplifies user access but also offers a fresh, interactive approach to digital security. As cyber threats evolve, it's innovations like these that promise a safer, user-friendly digital future.`,
-		link: null,
-		like: "IBAS-Icons",
-		tools: [],
-		sourceCode: null,
-	},
-	{
-		title: "Doodle-Images Based Authentication System",
-		coverImage: "Images/IBAS-Doodles.jpg",
-		intro: `Venturing into the realm of interactive user authentication, the Doodle-Images Based Authentication System offers a distinctive approach, allowing users to authenticate themselves through personally drawn doodles. Merging the power of visual memory with interactive design, users can bypass traditional password constraints, crafting a unique, yet intuitive, security experience. Developed with contemporary front-end technologies and powered by Python at the backend, this system marks a transformative shift in authentication paradigms.`,
-		description: `Existing System:
-		Traditional digital landscapes have been largely centered around the conventional email-password combination for user authentication. While some platforms have innovated with biometrics or smart cards, these methods pose challenges:
-
-		Cost Implications: Implementing biometrics or smart card systems frequently demands specialized infrastructure, thus raising cost concerns.
-
-		Practical Usability and Affordability: Advanced as they may be, the everyday applicability and affordability of these systems are debatable, given that not all users might possess the necessary devices or find them user-friendly.
-
-		Proposed Doodle-Images Based Authentication System:
-		This system redefines user authentication by integrating creativity and visual cues:
-
-		Canvas for Doodles at Registration:
-
-		During the initial setup, users are provided with a canvas, a dedicated space where they can unleash their creativity by drawing up to 5 unique doodles or sketches.
-		Conversion of Doodles to Images:
-
-		Post-drawing, these doodles are seamlessly converted into image formats, ready to be integrated into the authentication process.
-		Doodle-Based Login Process:
-
-		For login authentication, the user-drawn doodle images are presented alongside a collection of predetermined images, all randomly arranged within a grid format, be it a 10x10 matrix or four distinct 5x5 grids.
-		Users recognize and select their personal doodle images from this grid, allowing the system to authenticate their identity based on their selections.
-		Tech Stack:
-
-		The front-end, responsible for displaying the canvas and the image grid, is elegantly crafted using HTML, CSS, and JavaScript. The backend operations, which include doodle-to-image conversions and data processing, are efficiently handled by Python.
-		In conclusion, the Doodle-Images Based Authentication System epitomizes innovation in the realm of digital security. By fusing personal creativity with authentication processes, it offers users a tailored, engaging, and more intuitive access experience. As the digital realm becomes increasingly intricate, such pioneering solutions promise a secure, yet user-centered future.`,
-		link: null,
-		like: "IBAS-Doodles",
-		tools: [],
-		sourceCode: null,
-	},
-];
-
 const ProjectsInfo = [
+	{
+		title: "Smart Traffic Control Sytem",
+		coverImage: "Images/SmartTraffic.jpg",
+		intro: `Traffic congestion is one of the major modern-day crises in every big city in the world.
+			Edge detection technique is imperative to extract the required traffic information from the CCTV footage.
+			By defining the threshold level of vehicle count one can manage the traffic.`,
+		description: `Existing System:
+			Traditional traffic management systems largely depend on human intervention. Traffic police or personnel manually observe the vehicular build-up at intersections and control signals, adjusting the green-light duration based on the perceived volume of traffic. While such systems have been functional for years, they come with a plethora of challenges:
+	
+			Inefficiency: Human assessment might not always accurately gauge the severity of traffic build-up.
+			Increased Manpower Requirement: Constant monitoring requires substantial manpower, which may not be a viable solution for every city or intersection.
+			Reactivity: These systems are often reactive, addressing the problem after it has already occurred, rather than proactively managing the flow.
+			Proposed System:
+			The contemporary approach involves an automated, image-processing-based solution designed to alleviate the shortcomings of the manual systems. The core workings of this system are as follows:
+	
+			Image Capture: Strategically installed cameras at intersections continually capture real-time images of traffic approaching from all directions.
+	
+			Data Transfer and Storage: These images are then transferred to a centralized database for further processing. This not only aids in immediate traffic management but also serves as a rich dataset for future analytics and predictive modeling.
+	
+			Image Processing: Post data acquisition, the real magic happens. Advanced algorithms process these images to determine the density of vehicles. This is achieved primarily through edge detection techniques that identify the number and position of vehicles in each image.
+	
+			Signal Adjustment: Depending on the calculated density, the system intelligently adjusts the duration of the green and red lights at the signal. For instance, if the northward approach at an intersection is denser than the eastward approach, the system would allocate a longer green signal duration for the north.
+	
+			Through such a system, cities can look forward to a more streamlined, efficient, and proactive approach to traffic management. The system's automation not only reduces the need for constant human monitoring but also ensures more accurate and timely adjustments to traffic signals, fostering smoother traffic flows and potentially reducing congestion-related issues.`,
+		link: "https://anudeepkalitkar.github.io/Smart-Traffic-Contorl-System",
+		urlname: "SmartTrafficControlSytem",
+		tools: ["Python", "React", "Node.js", "OpenCV"],
+		sourceCode: null,
+	},
 	{
 		title: "MazeGame",
 		coverImage: "Images/MazeGame.png",
@@ -126,35 +52,8 @@ const ProjectsInfo = [
 		While emerging as the top maze-solver is a thrill in itself, "Maze Game" offers a richer experience. It's about the exhilarating journey, the unexpected turns, and the bonds forged in the chat rooms. The end of the maze is just one goal; the real win lies in the connections made and the fun had along the way.
 		In conclusion, "Maze Game" beckons players into a world where mazes aren't just puzzles, but arenas of competition, strategy, and connection. It's a game that champions the spirit of community even in the midst of rivalry. Join the maze, relish the challenges, and celebrate the shared joy of gaming!`,
 		link: "https://anudeepkalitkar.github.io/MazeGame/",
-		like: "MazeGame",
+		urlname: "MazeGame",
 		tools: ["React", "Node.js"],
-		sourceCode: null,
-	},
-	{
-		title: "Licence Plate Detection",
-		coverImage: "Images/License-Plate.png",
-		intro: `In today's fast-paced world, Automatic Vehicle Number Plate Recognition (ANPR) emerges as a critical tool for diverse traffic-related applications. Given the ubiquity of dash cameras in modern vehicles, the ability to harness and interpret this vast trove of continuous traffic data becomes paramount. From identifying stolen vehicles to retracing the steps of those involved in mishaps, the applications of ANPR are manifold.`,
-		description: `Significance of ANPR:
-		With ever-increasing vehicular traffic and the challenges posed by urbanization, there's a pressing need for technological interventions that can seamlessly integrate with the transportation ecosystem. ANPR fulfills this need by offering:
-
-		Traffic Management: Efficiently managing traffic congestions and bottlenecks.
-		Law Enforcement: Assisting in identifying violations, stolen vehicles, and providing critical insights during investigations.
-		Security: Enhancing security at check-posts, tolls, and sensitive areas by automatic vehicle identification.
-		Data Collection: Serving as a significant data collection point for urban planning and transportation departments.
-		Proposed System's Workflow:
-
-		High-Quality Image Capture: The initial step involves securing a distortion-free, clear image of the vehicle's number plate. This can be achieved by employing high-resolution cameras equipped with features like night vision and motion stabilization.
-
-		Plate Extraction Algorithm: Once the image is captured, the Plate Extraction algorithm is applied. This algorithm identifies and isolates the number plate area from the rest of the image, ensuring that what remains is a cropped image solely of the number plate, ready for the next step.
-
-		Optical Character Recognition (OCR): This is the heart of the ANPR system. OCR technology delves into the cropped image, deciphering and translating the characters on the plate into digital text. The accuracy of this step is crucial, given that even a slight misreading can lead to incorrect vehicle identification.
-
-		Database Cross-Verification: The derived license number isn't just displayed but is cross-referenced with a comprehensive database of registered vehicles. This step ensures that the system can flag anomalies, identify stolen vehicles, or assist in any other application where a vehicle's history or credentials need to be validated.
-
-		To encapsulate, the License Plate Detection system is an amalgamation of cutting-edge technology and vast databases, together providing an efficient, automated solution for vehicle recognition, bridging the gap between daily traffic data and actionable insights.`,
-		link: "https://anudeepkalitkar.github.io/Licence-Plate-Detection/",
-		like: "Licence-Plate-Detection",
-		tools: [],
 		sourceCode: null,
 	},
 	{
@@ -181,9 +80,10 @@ const ProjectsInfo = [
 			Advanced computer vision techniques were employed to augment the dataset, ensuring a comprehensive training process. Proper labeling and dataset preparation were paramount, ensuring the models were trained on high-quality data.`,
 		tools: ["Python", "TensorFlow", "YOLOv7"],
 		link: null,
-		like: "Road-Sign-Detection",
+		urlname: "RoadSignDetection",
 		sourceCode: null,
 	},
+
 	{
 		title: "News Classifier using Kafka",
 		coverImage: "Images/News_Classification.png",
@@ -207,9 +107,10 @@ const ProjectsInfo = [
 
 		tools: ["Kafka", "MongoDB", "NLP", "PySpark"],
 		link: null,
-		like: "News-Classification",
+		urlname: "NewsClassification",
 		sourceCode: null,
 	},
+
 	{
 		title: "Indoor Navigation",
 		coverImage: "Images/Indoor.png",
@@ -244,12 +145,39 @@ const ProjectsInfo = [
 		The generated path is then visually relayed to the end-user, ensuring they have a clear and concise route to follow.
 		In essence, the 'In-House Navigation' application stands as a testament to the fusion of modern web technologies and classic algorithmic solutions. By bridging the gap between intricate architectural layouts and user-friendly navigation, we aim to revolutionize the indoor shopping experience, making it more efficient, enjoyable, and hassle-free.`,
 		link: null,
-		like: "IndoorNav",
+		urlname: "IndoorNav",
 		tools: ["Python", "React", "Node.js"],
 		sourceCode: null,
 	},
 
-	
+	{
+		title: "Licence Plate Detection",
+		coverImage: "Images/License-Plate.png",
+		intro: `In today's fast-paced world, Automatic Vehicle Number Plate Recognition (ANPR) emerges as a critical tool for diverse traffic-related applications. Given the ubiquity of dash cameras in modern vehicles, the ability to harness and interpret this vast trove of continuous traffic data becomes paramount. From identifying stolen vehicles to retracing the steps of those involved in mishaps, the applications of ANPR are manifold.`,
+		description: `Significance of ANPR:
+		With ever-increasing vehicular traffic and the challenges posed by urbanization, there's a pressing need for technological interventions that can seamlessly integrate with the transportation ecosystem. ANPR fulfills this need by offering:
+
+		Traffic Management: Efficiently managing traffic congestions and bottlenecks.
+		Law Enforcement: Assisting in identifying violations, stolen vehicles, and providing critical insights during investigations.
+		Security: Enhancing security at check-posts, tolls, and sensitive areas by automatic vehicle identification.
+		Data Collection: Serving as a significant data collection point for urban planning and transportation departments.
+		Proposed System's Workflow:
+
+		High-Quality Image Capture: The initial step involves securing a distortion-free, clear image of the vehicle's number plate. This can be achieved by employing high-resolution cameras equipped with features like night vision and motion stabilization.
+
+		Plate Extraction Algorithm: Once the image is captured, the Plate Extraction algorithm is applied. This algorithm identifies and isolates the number plate area from the rest of the image, ensuring that what remains is a cropped image solely of the number plate, ready for the next step.
+
+		Optical Character Recognition (OCR): This is the heart of the ANPR system. OCR technology delves into the cropped image, deciphering and translating the characters on the plate into digital text. The accuracy of this step is crucial, given that even a slight misreading can lead to incorrect vehicle identification.
+
+		Database Cross-Verification: The derived license number isn't just displayed but is cross-referenced with a comprehensive database of registered vehicles. This step ensures that the system can flag anomalies, identify stolen vehicles, or assist in any other application where a vehicle's history or credentials need to be validated.
+
+		To encapsulate, the License Plate Detection system is an amalgamation of cutting-edge technology and vast databases, together providing an efficient, automated solution for vehicle recognition, bridging the gap between daily traffic data and actionable insights.`,
+		link: "https://anudeepkalitkar.github.io/Licence-Plate-Detection/",
+		urlname: "LicencePlateDetection",
+		tools: [],
+		sourceCode: null,
+	},
+
 	{
 		title: "Image Similarity Based Authentication System",
 		coverImage: "Images/IBAS-IC.jpg",
@@ -281,8 +209,78 @@ const ProjectsInfo = [
 		The frontend, which presents the canvas and handles user interaction, is constructed using HTML, CSS, and JavaScript. In contrast, the backend, responsible for image processing, comparison, and storage, is efficiently managed by Python coupled with the OpenCV library.
 		To encapsulate, the Image Similarity Based Authentication System is a vanguard in digital access, blending the innate human proclivity for visuals with cutting-edge technology. As the digital landscape continues to expand, such intuitive and personalized systems herald a future where security is both stringent and user-friendly.`,
 		link: null,
-		like: "IBAS-Similarity",
-		tools: [],
+		urlname: "IBASSimilarity",
+		tools: ["Python", "HTML", "CSS", "JS", "Php"],
+		sourceCode: null,
+	},
+
+	{
+		title: "Image Based Authentication System",
+		coverImage: "Images/IBAS-Icons.jpg",
+		intro: `Breaking away from the constraints of traditional alphanumeric passwords, the Image-Based Authentication System introduces a novel, intuitive way for users to secure their credentials. Harnessing the power of visual memory, this system invites users to authenticate using sequences of images, offering not only enhanced security but also an effortless user experience. Crafted using cutting-edge front-end technologies and powered by PHP at the backend, this system paves the way for a new era of authentication.`,
+		description: `Existing System:
+		The landscape of digital authentication has been predominantly dominated by the standard email-password combination. Some platforms have ventured into advanced mechanisms like biometrics or smart cards. However, while they do offer heightened security, concerns arise:
+
+		Cost Implications: Implementing biometrics or smart card authentication often requires specialized hardware or software, escalating the overall costs.
+
+		Usability and Affordability: While these systems are technologically advanced, their everyday practicality and accessibility for the average user remain in question. Not everyone might have access to the required devices or find them convenient.
+
+		Proposed Image-Based Authentication System:
+		This system is an innovative leap, shifting the paradigm of authentication:
+
+		Visual Grid of Images:
+
+		During the registration or setup phase, users are presented with a grid filled with predetermined images or icons. Depending on the implementation, this could be a 10x10 grid or four 5x5 grids.
+		A diverse array of image sets are utilized, ranging from common icons to mnemonic symbols and even Telugu alphabets, catering to a broad user base.
+		Image Sequence as Password:
+
+		Users authenticate themselves by selecting a specific sequence of images from the grid. This sequence, while intuitive for the user to remember, acts as their unique "password."
+		Unique Hash Generation:
+
+		As users define their image sequence, the system, in the background, translates this sequence into a unique hash value. This value, representing the user's chosen sequence, is then stored securely in the database.
+		Simplified Login Process:
+
+		When logging in, users simply need to replicate their chosen image sequence. Given the visual nature of images, users often find this method more memorable and intuitive than traditional passwords.
+		Tech Stack:
+
+		The frontend elegantly displays the grid and captures user inputs using a combination of HTML, CSS, and JavaScript. In contrast, the backend, powered by PHP, efficiently processes the data, generates the hashes, and manages the database interactions.
+		In essence, the Image-Based Authentication System seamlessly merges usability with security. By anchoring the authentication process in visual memory, it not only simplifies user access but also offers a fresh, interactive approach to digital security. As cyber threats evolve, it's innovations like these that promise a safer, user-friendly digital future.`,
+		link: null,
+		urlname: "IBASIcons",
+		tools: ["HTML", "CSS", "JS","Php"],
+		sourceCode: null,
+	},
+	{
+		title: "Doodle-Images Based Authentication System",
+		coverImage: "Images/IBAS-Doodles.jpg",
+		intro: `Venturing into the realm of interactive user authentication, the Doodle-Images Based Authentication System offers a distinctive approach, allowing users to authenticate themselves through personally drawn doodles. Merging the power of visual memory with interactive design, users can bypass traditional password constraints, crafting a unique, yet intuitive, security experience. Developed with contemporary front-end technologies and powered by Python at the backend, this system marks a transformative shift in authentication paradigms.`,
+		description: `Existing System:
+		Traditional digital landscapes have been largely centered around the conventional email-password combination for user authentication. While some platforms have innovated with biometrics or smart cards, these methods pose challenges:
+
+		Cost Implications: Implementing biometrics or smart card systems frequently demands specialized infrastructure, thus raising cost concerns.
+
+		Practical Usability and Affordability: Advanced as they may be, the everyday applicability and affordability of these systems are debatable, given that not all users might possess the necessary devices or find them user-friendly.
+
+		Proposed Doodle-Images Based Authentication System:
+		This system redefines user authentication by integrating creativity and visual cues:
+
+		Canvas for Doodles at Registration:
+
+		During the initial setup, users are provided with a canvas, a dedicated space where they can unleash their creativity by drawing up to 5 unique doodles or sketches.
+		Conversion of Doodles to Images:
+
+		Post-drawing, these doodles are seamlessly converted into image formats, ready to be integrated into the authentication process.
+		Doodle-Based Login Process:
+
+		For login authentication, the user-drawn doodle images are presented alongside a collection of predetermined images, all randomly arranged within a grid format, be it a 10x10 matrix or four distinct 5x5 grids.
+		Users recognize and select their personal doodle images from this grid, allowing the system to authenticate their identity based on their selections.
+		Tech Stack:
+
+		The front-end, responsible for displaying the canvas and the image grid, is elegantly crafted using HTML, CSS, and JavaScript. The backend operations, which include doodle-to-image conversions and data processing, are efficiently handled by Python.
+		In conclusion, the Doodle-Images Based Authentication System epitomizes innovation in the realm of digital security. By fusing personal creativity with authentication processes, it offers users a tailored, engaging, and more intuitive access experience. As the digital realm becomes increasingly intricate, such pioneering solutions promise a secure, yet user-centered future.`,
+		link: null,
+		urlname: "IBASDoodles",
+		tools: ["HTML", "CSS", "JS","Php"],
 		sourceCode: null,
 	},
 
@@ -310,8 +308,8 @@ const ProjectsInfo = [
 
 		In essence, the Framework for Analysis of Road Accidents offers a holistic, data-driven approach to understand accident severity, ensuring stakeholders—from policymakers to urban planners—can derive actionable insights and implement preventive measures effectively.`,
 		link: null,
-		like: "AnalysisofRoadAccidents",
-		tools: [],
+		urlname: "AnalysisofRoadAccidents",
+		tools: ["Python"],
 		sourceCode: null,
 	},
 
@@ -323,10 +321,11 @@ const ProjectsInfo = [
 		description:
 			"The Man-Machine Interface for the SDR Chipset project is a pioneering initiative that seamlessly blends the complexities of Software Defined Radio (SDR) chipsets with user-friendly interactions. At its core, the project offers a Graphical User Interface (GUI) that empowers users to easily enable specific bits within designated registers, eliminating the need for intricate coding or manual adjustments. Additionally, the system provides an intuitive interface that displays the outcomes of various input combinations in the registers, offering immediate feedback for understanding and troubleshooting. This innovative approach not only democratizes access to SDR configurations but also streamlines development and testing processes, making it an invaluable tool for both novices and experts in the field.",
 		link: null,
-		like: "LMS6002D",
-		tools: [],
+		urlname: "LMS6002D",
+		tools: ["C++"],
 		sourceCode: null,
 	},
-];
 
-export { ProjectsInfo, LatestProjectInfo, OnGoingProjectsInfo };
+]
+
+export { ProjectsInfo}

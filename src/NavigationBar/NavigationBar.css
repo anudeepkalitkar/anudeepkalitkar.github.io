@@ -1,6 +1,6 @@
-.navbar {
-	background: black;
-	color: white;
+ .navbar-fixed {
+	background: #c2d9f0;
+	color: #000000;
 }
 .navbar .brand-logo {
 	padding-left: 10%;
@@ -14,20 +14,22 @@
 	.navbar .brand-logo {
 		font-size: calc(100%);
 	}
-     
 }
+
 .navbar .sidenav-trigger {
 	background: inherit;
 	color: inherit;
 }
-.navbar .hide-on-med-and-down .nav-item {
+.navbar .nav-item {
 	background: inherit;
 	color: inherit;
+	font-weight: bold;
 }
-.nav-item:hover{
+
+.nav-item:hover {
 	transform: scale(1.5);
 }
-.switch label{
+.switch label {
 	font: inherit;
 	color: inherit;
 }
@@ -42,8 +44,8 @@
 }
 
 .sidenav {
-	background: black;
+	background: #c2d9f0;
 }
 .sidenav .nav-item {
-	color: white;
+	color: inherit;
 }

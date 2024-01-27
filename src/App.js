@@ -1,52 +1,48 @@
 import "./App.css";
-import React, { useState } from "react";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Layout from "./Layout/Layout";
+import HomePage from "./HomePage/HomePage";
+import Education from "./BackGround/Education";
+import Experience from "./BackGround/Experience";
 import NavigationBar from "./NavigationBar/NavigationBar";
-import Header from "./Header/Header";
-import AboutMe from "./AboutMe/AboutMe";
-import BackGround from "./BackGound/BackGround";
-import ContactMe from "./ContactMe/ContactMe";
-import Projects from "./Projects/Projects";
-import LatestProject from "./Projects/LatestProject";
-import ProjectDescription from "./Projects/ProjectDescription";
 import Footer from "./Footer/Footer";
-import { ProjectsInfo, OnGoingProjectsInfo } from "./StaticInformation/ProjectInfo";
-
+import Skills from "./Skills/Skills";
+import Projects from "./Projects/Projects";
+import { ProjectsInfo } from "./StaticInformation/ProjectInfo";
+import ProjectDescription from "./Projects/ProjectDescription";
+import ContactMe from "./ContactMe/ContactMe"
 function App() {
-	const [projectId, SetProjectId] = useState();
+	const projectRoutes = [];
+	ProjectsInfo.forEach((project, key) => {
+		projectRoutes.push(
+
+			<Route
+				key={"project" + key}
+				path={"/" + project.urlname}
+				element={
+					<Layout
+						PassedComponent={() => <ProjectDescription projectUrlName={project.urlname} />}
+					/>
+				}
+			/>
+		);
+	});
 	return (
-		<div className="body">
-			{projectId && (
-				<>
-					<ProjectDescription projectId={projectId} SetProjectId={SetProjectId} />
+		<Router>
+			<NavigationBar></NavigationBar>
+			<Routes>
+				<Route path="/" element={<Layout PassedComponent={HomePage} />} />
+				<Route path="/skills" element={<Layout PassedComponent={Skills} />} />
+				<Route path="/projects" element={<Layout PassedComponent={Projects} />} />
+				<Route path="/education" element={<Layout PassedComponent={Education} />} />
+				<Route path="/experience" element={<Layout PassedComponent={Experience} />} />
+				<Route path="/contactme" element={<Layout PassedComponent={ContactMe} />} />
+				{projectRoutes}
+			</Routes>
 
-					<div className="fixed-action-btn">
-						<a className="btn-floating btn-large red" href="#NavBar">
-							<i className="large material-icons">arrow_upward</i>
-						</a>
-					</div>
-					<Footer></Footer>
-				</>
-			)}
-			{!projectId && (
-				<>
-					<NavigationBar SetProjectId={SetProjectId} />
-					<Header />
-					<AboutMe></AboutMe>
-					<BackGround></BackGround>
-					<LatestProject SetProjectId={SetProjectId}></LatestProject>
-					<Projects SetProjectId={SetProjectId} projectInfoList = {OnGoingProjectsInfo} projectType ="On Going Projects"></Projects>
-					<Projects SetProjectId={SetProjectId} projectInfoList = {ProjectsInfo} projectType ="Projects"></Projects>
-					<ContactMe></ContactMe>
-
-					<div className="fixed-action-btn">
-						<a className="btn-floating btn-large red" href="#NavBar">
-							<i className="large material-icons">arrow_upward</i>
-						</a>
-					</div>
-					<Footer></Footer>
-				</>
-			)}
-		</div>
+			<Footer></Footer>
+		</Router>
 	);
 }
 

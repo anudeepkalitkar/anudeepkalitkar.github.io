@@ -45,7 +45,7 @@ const ContactMe = (props) => {
 								onChange={handleChange}
 								required
 							/>
-							<label>Your Email</label>
+							<label className="black-text">Your Email</label>
 						</div>
 
 						<div className="input-field ">
@@ -57,7 +57,7 @@ const ContactMe = (props) => {
 								onChange={handleChange}
 								required
 							/>
-							<label>Subject</label>
+							<label className="black-text">Subject</label>
 						</div>
 
 						<div className="input-field">
@@ -68,7 +68,7 @@ const ContactMe = (props) => {
 								value={formData.sendersMessage}
 								onChange={handleChange}
 								required></textarea>
-							<label>Message</label>
+							<label className="black-text">Message</label>
 						</div>
 						<br />
 						<div className="center">

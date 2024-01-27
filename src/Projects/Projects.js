@@ -2,20 +2,16 @@ import React from "react";
 import axios from "axios";
 import "./Projects.css";
 import { LikeAPI } from "../StaticInformation/UrlLinkInfo";
+import { ProjectsInfo } from "../StaticInformation/ProjectInfo";
 const Projects = (props) => {
-	const { SetProjectId, projectInfoList, projectType  } = props;
 	const projectList = [];
-	const handleProjectRedirection = (event) => {
-		SetProjectId(event.target.id);
-	};
-
-	projectInfoList.forEach((project, key) => {
+	ProjectsInfo.forEach((project, key) => {
 		projectList.push(
-			<div className="row" key={"project" + key}>
-				<div className="col s12 m6 container">
+			<div className="row" key={"project" + key} id={project.urlname}>
+				<div className="col s12 container">
 					<img className="responsive-img" src={project.coverImage} alt={project.title} />
 				</div>
-				<div className="col s12 m6">
+				<div className="col s12">
 					<h4 className="">{project.title}</h4>
 
 					<h6 className="project-intro">{project.intro}</h6>
@@ -24,11 +20,10 @@ const Projects = (props) => {
 						<div className="col s12 m6">
 							<a
 								className="btn green wave-effect center"
-								href="#PD-header"
-								id={key}
+								href={"/"+project.urlname}
 								rel="noreferrer"
-								onClick={handleProjectRedirection}>
-								<i className="fas fa-laptop-code"></i> Explore more
+							>
+								<i className="fas fa-laptop-code"></i> Explore
 							</a>
 						</div>
 
@@ -36,7 +31,7 @@ const Projects = (props) => {
 							<button
 								className="btn blue wave-effect center"
 								onClick={() => {
-									handleLikes(project.like);
+									handleLikes(project.urlname);
 								}}>
 								<i className="far fa-thumbs-up"></i> Like
 							</button>
@@ -69,8 +64,8 @@ const Projects = (props) => {
 	};
 
 	return (
-		<section className="section" id={projectType}>
-			<h3 className="center ">{projectType}</h3>
+		<section className="section">
+			<h3 className="center ">Projects</h3>
 			<br></br>
 			<div className="container projects">{projectList}</div>
 		</section>

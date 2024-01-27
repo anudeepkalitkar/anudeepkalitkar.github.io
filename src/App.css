@@ -1,30 +1,19 @@
-/* .body[data-theme="dark"]{
-    background: black;
-    color: white ;
-    font-family: "Lato", arial, sans-serif;
-} */
-body{
-    background: black;
-    color: white ;
-    font-family: "Lato", arial, sans-serif;
-
+body {
+	background: #c2d9f0;
+	font-family: "Lato", arial, sans-serif;
 }
 section {
-    margin-top: 10px;
-    margin-bottom: 0px;
-    background: #1e2124;
-    /* height:100vh; */
-
-  }
-.section-title{
-    padding-bottom: 3%;
-    padding-top: 5%;
-
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+.section-title {
+	padding-bottom: 3%;
+	padding-top: 5%;
 }
 .fixed-action-btn {
-    bottom: 20px;
-    right: 20px;
+	bottom: 20px;
+	right: 20px;
 }
 :root {
-    color-scheme: dark;
-  }
+	color-scheme: light;
+}

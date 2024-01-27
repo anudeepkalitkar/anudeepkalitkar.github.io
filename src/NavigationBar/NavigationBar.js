@@ -4,23 +4,18 @@ import M from "materialize-css";
 import { ResumePath } from "../StaticInformation/AboutMeInfo";
 
 const NavigationBar = (props) => {
-	const {SetProjectId } = props;
 
 	useEffect(() => {
 		let sidenav = document.querySelector("#mobile-nav");
 		M.Sidenav.init(sidenav, {});
 	}, []);
 
-	const handleNavOnClick = (event) =>{
-		// event.preventDefault();
-		SetProjectId(null);
-	};
 
 	return (
 		// <div className="navbar-fixed">
-		<div id="NavBar">
+		<div id="NavBar" className="navbar-fixed">
 			<nav className="navbar z-depth-5">
-				<div className="navbar nav-wrapper">
+				<div className="navbar-fixed nav-wrapper">
 					{/* <a href="99kalitkar.in" className="brand-logo"> <img className="nav-hero" src="Images/Me.jpg" alt="Me" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Anudeep Kalitkar</a> */}
 					<a href="99kalitkar.in" className="brand-logo">
 						Anudeep Kalitkar
@@ -30,75 +25,90 @@ const NavigationBar = (props) => {
 					</a>
 					<ul className="hide-on-med-and-down right">
 						<li>
-							<a href="#Header" className="nav-item" onClick={handleNavOnClick}>
+							<a href="/" className="nav-item">
 								Home
 							</a>
 						</li>
 						<li>
-							<a href="#About" className="nav-item" onClick={handleNavOnClick}>
-								About
+							<a href="/skills" className="nav-item">
+								Skills
 							</a>
 						</li>
 						<li>
-							<a href="#Experience" className="nav-item" onClick={handleNavOnClick}>
+							<a href="/education" className="nav-item">
+								Education
+							</a>
+						</li>
+						<li>
+							<a href="/experience" className="nav-item">
 								Experience
 							</a>
 						</li>
 						<li>
-							<a href="#Projects" className="nav-item" onClick={handleNavOnClick}>
+							<a href="/projects" className="nav-item">
 								Projects
 							</a>
 						</li>
 						<li>
-							<a href="#Contact" className="nav-item" onClick={handleNavOnClick}>
-								Contact Info
+							<a href="/contactme" className="nav-item">
+								Contact Me
 							</a>
 						</li>
 
 						<li>
-						<a className="waves-effect waves-light btn green" target="_blank" href={ResumePath} rel="noreferrer">Resume</a>
-
-						</li>
-
-						<li>
-							<a href="#!" className="nav-item black-text">
-								FreeSpacetoright
+							<a
+								className="waves-effect waves-light btn green"
+								target="_blank"
+								href={ResumePath}
+								rel="noreferrer">
+								Resume
 							</a>
 						</li>
 					</ul>
-					<ul className="sidenav" id="mobile-nav" onClick={handleNavOnClick}>
+					<ul className="sidenav" id="mobile-nav">
 						<li>
-							<a href="99kalitkar.in" className="nav-item" onClick={handleNavOnClick}>
+							<a href="99kalitkar.in" className="nav-item">
 								&nbsp;
 							</a>
 						</li>
 						<li>
-							<a href="#Header" className="nav-item" onClick={handleNavOnClick}>
+							<a href="/" className="nav-item">
 								Home
 							</a>
 						</li>
 						<li>
-							<a href="#About" className="nav-item" onClick={handleNavOnClick}>
-								About
+							<a href="/skills" className="nav-item">
+								Skills
 							</a>
 						</li>
 						<li>
-							<a href="#Experience" className="nav-item" onClick={handleNavOnClick}>
+							<a href="/education" className="nav-item">
+								Education
+							</a>
+						</li>
+						<li>
+							<a href="/experience" className="nav-item">
 								Experience
 							</a>
 						</li>
 						<li>
-							<a href="#Projects" className="nav-item" onClick={handleNavOnClick}>
+							<a href="/projects" className="nav-item">
 								Projects
 							</a>
 						</li>
 						<li>
-							<a href="#Contact" className="nav-item" onClick={handleNavOnClick}>
-								Contact Info
+							<a href="/contactme" className="nav-item">
+								Contact Me
 							</a>
 						</li>
 						<li>
-							<a className="waves-effect waves-light btn green" target="_blank" href={ResumePath} rel="noreferrer">Resume</a>
+							<a
+								className="waves-effect waves-light btn green"
+								target="_blank"
+								href={ResumePath}
+								rel="noreferrer">
+								Resume
+							</a>
 						</li>
 					</ul>
 				</div>

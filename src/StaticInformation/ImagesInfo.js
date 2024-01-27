@@ -1,4 +1,4 @@
-const DisplayImage = "Images/Me.jpg";
+const DisplayImage = "Images/AnudeepKalitkar.jpg";
 const SkillSetImages = [
 	{
 		skill: "Python",

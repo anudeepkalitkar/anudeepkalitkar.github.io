@@ -1,0 +1,29 @@
+.section-inner {
+	color: inherit !important;
+	background-color: inherit !important;
+}
+
+.modal {
+	background-color: #92c8ff;
+}
+.modal .title-div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+/* .modal .btn {
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    transform: translate(-80%, -80%);
+    text-align: center;
+    height:max-content;
+} */
+
+.modal .card {
+	color: inherit;
+	background-color: inherit;
+}
