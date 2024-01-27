@@ -20,7 +20,7 @@ const Projects = (props) => {
 						<div className="col s12 m6">
 							<a
 								className="btn green wave-effect center"
-								href={"/"+project.urlname}
+								href={"/#/"+project.urlname}
 								rel="noreferrer"
 							>
 								<i className="fas fa-laptop-code"></i> Explore
