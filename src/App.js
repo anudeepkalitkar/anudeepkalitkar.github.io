@@ -12,6 +12,8 @@ import Projects from "./Projects/Projects";
 import { ProjectsInfo } from "./StaticInformation/ProjectInfo";
 import ProjectDescription from "./Projects/ProjectDescription";
 import ContactMe from "./ContactMe/ContactMe"
+import { HashRouter } from 'react-router-dom';
+
 function App() {
 	const projectRoutes = [];
 	ProjectsInfo.forEach((project, key) => {
@@ -29,7 +31,8 @@ function App() {
 		);
 	});
 	return (
-		<Router>
+		<>
+		<HashRouter>
 			<NavigationBar></NavigationBar>
 			<Routes>
 				<Route path="/" element={<Layout PassedComponent={HomePage} />} />
@@ -42,7 +45,8 @@ function App() {
 			</Routes>
 
 			<Footer></Footer>
-		</Router>
+		</HashRouter>
+		</>
 	);
 }
 

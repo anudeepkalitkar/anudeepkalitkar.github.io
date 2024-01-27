@@ -17,7 +17,7 @@ const NavigationBar = (props) => {
 			<nav className="navbar z-depth-5">
 				<div className="navbar-fixed nav-wrapper">
 					{/* <a href="99kalitkar.in" className="brand-logo"> <img className="nav-hero" src="Images/Me.jpg" alt="Me" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Anudeep Kalitkar</a> */}
-					<a href="99kalitkar.in" className="brand-logo">
+					<a href="/#/" className="brand-logo">
 						Anudeep Kalitkar
 					</a>
 					<a href="#!" data-target="mobile-nav" className="sidenav-trigger">
@@ -25,32 +25,32 @@ const NavigationBar = (props) => {
 					</a>
 					<ul className="hide-on-med-and-down right">
 						<li>
-							<a href="/" className="nav-item">
+							<a href="/#/" className="nav-item">
 								Home
 							</a>
 						</li>
 						<li>
-							<a href="/skills" className="nav-item">
+							<a href="/#/skills" className="nav-item">
 								Skills
 							</a>
 						</li>
 						<li>
-							<a href="/education" className="nav-item">
+							<a href="/#/education" className="nav-item">
 								Education
 							</a>
 						</li>
 						<li>
-							<a href="/experience" className="nav-item">
+							<a href="/#/experience" className="nav-item">
 								Experience
 							</a>
 						</li>
 						<li>
-							<a href="/projects" className="nav-item">
+							<a href="/#/projects" className="nav-item">
 								Projects
 							</a>
 						</li>
 						<li>
-							<a href="/contactme" className="nav-item">
+							<a href="/#/contactme" className="nav-item">
 								Contact Me
 							</a>
 						</li>
@@ -72,32 +72,32 @@ const NavigationBar = (props) => {
 							</a>
 						</li>
 						<li>
-							<a href="/" className="nav-item">
+							<a href="/#/" className="nav-item">
 								Home
 							</a>
 						</li>
 						<li>
-							<a href="/skills" className="nav-item">
+							<a href="/#/skills" className="nav-item">
 								Skills
 							</a>
 						</li>
 						<li>
-							<a href="/education" className="nav-item">
+							<a href="/#/education" className="nav-item">
 								Education
 							</a>
 						</li>
 						<li>
-							<a href="/experience" className="nav-item">
+							<a href="/#/experience" className="nav-item">
 								Experience
 							</a>
 						</li>
 						<li>
-							<a href="/projects" className="nav-item">
+							<a href="/#/projects" className="nav-item">
 								Projects
 							</a>
 						</li>
 						<li>
-							<a href="/contactme" className="nav-item">
+							<a href="/#/contactme" className="nav-item">
 								Contact Me
 							</a>
 						</li>
