@@ -51,7 +51,7 @@ const ProjectsInfo = [
 
 		While emerging as the top maze-solver is a thrill in itself, "Maze Game" offers a richer experience. It's about the exhilarating journey, the unexpected turns, and the bonds forged in the chat rooms. The end of the maze is just one goal; the real win lies in the connections made and the fun had along the way.
 		In conclusion, "Maze Game" beckons players into a world where mazes aren't just puzzles, but arenas of competition, strategy, and connection. It's a game that champions the spirit of community even in the midst of rivalry. Join the maze, relish the challenges, and celebrate the shared joy of gaming!`,
-		link: "https://anudeepkalitkar.github.io/MazeGame/",
+		link: "https://anudeepkalitkar.github.io/Maze-Game/",
 		urlname: "MazeGame",
 		tools: ["React", "Node.js"],
 		sourceCode: null,
