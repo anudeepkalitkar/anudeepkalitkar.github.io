@@ -17,7 +17,7 @@ const Projects = (props) => {
 					<h6 className="project-intro">{project.intro}</h6>
 
 					<div className="row center">
-						<div className="col s12 m6">
+						<div className="col s12 m4">
 							<a
 								className="btn green wave-effect center"
 								href={"/#/"+project.urlname}
@@ -26,8 +26,16 @@ const Projects = (props) => {
 								<i className="fas fa-laptop-code"></i> Explore
 							</a>
 						</div>
-
-						<div className="col s12 m6">
+						<div className="col s12 m4">
+							{project.link && (
+								<div className="profile-switch">
+									<a className="btn-large green" href={project.link}>
+										Live
+									</a>
+								</div>
+							)}
+						</div>
+						<div className="col s12 m4">
 							<button
 								className="btn blue wave-effect center"
 								onClick={() => {

@@ -26,7 +26,7 @@ const ProjectsInfo = [
 		link: "https://anudeepkalitkar.github.io/Smart-Traffic-Contorl-System",
 		urlname: "SmartTrafficControlSytem",
 		tools: ["Python", "React", "Node.js", "OpenCV"],
-		sourceCode: null,
+		sourceCode: "https://github.com/anudeepkalitkar/Smart-Traffic-Contorl-System",
 	},
 	{
 		title: "MazeGame",
@@ -54,7 +54,7 @@ const ProjectsInfo = [
 		link: "https://anudeepkalitkar.github.io/Maze-Game/",
 		urlname: "MazeGame",
 		tools: ["React", "Node.js"],
-		sourceCode: null,
+		sourceCode: "https://github.com/anudeepkalitkar/Maze-Game",
 	},
 	{
 		title: "Real-Time Road Sign Detection, Recognition, and Driver Guidance System",
@@ -175,7 +175,7 @@ const ProjectsInfo = [
 		link: "https://anudeepkalitkar.github.io/Licence-Plate-Detection/",
 		urlname: "LicencePlateDetection",
 		tools: [],
-		sourceCode: null,
+		sourceCode: "https://github.com/anudeepkalitkar/Licence-Plate-Detection",
 	},
 
 	{
@@ -208,10 +208,10 @@ const ProjectsInfo = [
 
 		The frontend, which presents the canvas and handles user interaction, is constructed using HTML, CSS, and JavaScript. In contrast, the backend, responsible for image processing, comparison, and storage, is efficiently managed by Python coupled with the OpenCV library.
 		To encapsulate, the Image Similarity Based Authentication System is a vanguard in digital access, blending the innate human proclivity for visuals with cutting-edge technology. As the digital landscape continues to expand, such intuitive and personalized systems herald a future where security is both stringent and user-friendly.`,
-		link: null,
+		link: "https://anudeepkalitkar.github.io/Image-Based-Authentication-System-Signature/",
 		urlname: "IBASSimilarity",
 		tools: ["Python", "HTML", "CSS", "JS", "Php"],
-		sourceCode: null,
+		sourceCode: "https://github.com/anudeepkalitkar/Image-Based-Authentication-System-Signature",
 	},
 
 	{
@@ -248,40 +248,7 @@ const ProjectsInfo = [
 		link: "https://anudeepkalitkar.github.io/Image-Based-Authentication-System/",
 		urlname: "IBASIcons",
 		tools: ["HTML", "CSS", "JS","Php"],
-		sourceCode: null,
-	},
-	{
-		title: "Doodle-Images Based Authentication System",
-		coverImage: "Images/IBAS-Doodles.jpg",
-		intro: `Venturing into the realm of interactive user authentication, the Doodle-Images Based Authentication System offers a distinctive approach, allowing users to authenticate themselves through personally drawn doodles. Merging the power of visual memory with interactive design, users can bypass traditional password constraints, crafting a unique, yet intuitive, security experience. Developed with contemporary front-end technologies and powered by Python at the backend, this system marks a transformative shift in authentication paradigms.`,
-		description: `Existing System:
-		Traditional digital landscapes have been largely centered around the conventional email-password combination for user authentication. While some platforms have innovated with biometrics or smart cards, these methods pose challenges:
-
-		Cost Implications: Implementing biometrics or smart card systems frequently demands specialized infrastructure, thus raising cost concerns.
-
-		Practical Usability and Affordability: Advanced as they may be, the everyday applicability and affordability of these systems are debatable, given that not all users might possess the necessary devices or find them user-friendly.
-
-		Proposed Doodle-Images Based Authentication System:
-		This system redefines user authentication by integrating creativity and visual cues:
-
-		Canvas for Doodles at Registration:
-
-		During the initial setup, users are provided with a canvas, a dedicated space where they can unleash their creativity by drawing up to 5 unique doodles or sketches.
-		Conversion of Doodles to Images:
-
-		Post-drawing, these doodles are seamlessly converted into image formats, ready to be integrated into the authentication process.
-		Doodle-Based Login Process:
-
-		For login authentication, the user-drawn doodle images are presented alongside a collection of predetermined images, all randomly arranged within a grid format, be it a 10x10 matrix or four distinct 5x5 grids.
-		Users recognize and select their personal doodle images from this grid, allowing the system to authenticate their identity based on their selections.
-		Tech Stack:
-
-		The front-end, responsible for displaying the canvas and the image grid, is elegantly crafted using HTML, CSS, and JavaScript. The backend operations, which include doodle-to-image conversions and data processing, are efficiently handled by Python.
-		In conclusion, the Doodle-Images Based Authentication System epitomizes innovation in the realm of digital security. By fusing personal creativity with authentication processes, it offers users a tailored, engaging, and more intuitive access experience. As the digital realm becomes increasingly intricate, such pioneering solutions promise a secure, yet user-centered future.`,
-		link: null,
-		urlname: "IBASDoodles",
-		tools: ["HTML", "CSS", "JS","Php"],
-		sourceCode: null,
+		sourceCode: "https://github.com/anudeepkalitkar/Image-Based-Authentication-System-Icons",
 	},
 
 	{
