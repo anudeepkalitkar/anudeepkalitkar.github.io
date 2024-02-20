@@ -29,7 +29,7 @@ const Projects = (props) => {
 						<div className="col s12 m4">
 							{project.link && (
 								<div className="profile-switch">
-									<a className="btn-large green" href={project.link}>
+									<a className="btn green wave-effect center" href={project.link}>
 										Live
 									</a>
 								</div>
