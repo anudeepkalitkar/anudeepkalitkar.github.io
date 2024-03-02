@@ -29,6 +29,20 @@ const ProjectsInfo = [
 		sourceCode: "https://github.com/anudeepkalitkar/Smart-Traffic-Contorl-System",
 	},
 	{
+		title: "Maze Solver Using Computer Vision",
+		coverImage: "Images/MazeSolver.png",
+		intro: `A system designed to autonomously process and solve 2D mazes by employing computer vision techniques and edge detection for enhanced robotic pathfinding`,
+		description: `This project introduces a novel approach to solving two-dimensional mazes using computer vision, marking a significant advancement in robotics and human-computer interaction. By leveraging sophisticated image processing techniques and machine learning, the system efficiently interprets maze structures from images and computes effective solution paths, bypassing traditional graph search algorithms for a vision-centric resolution.
+		The implementation involves preprocessing maze images for clarity, applying edge detection to outline the maze, and then using the Breadth-First Search (BFS) algorithm to navigate through the maze efficiently. This process highlights the project's innovative use of computer vision in pathfinding, demonstrating its potential in autonomous navigation and indoor route-finding technologies.
+	  `,
+		link: "",
+		urlname: "MazeSolver",
+		tools: ["Python", "React", "Node.js", "OpenCV"],
+		sourceCode: "",
+	},
+	
+
+	{
 		title: "MazeGame",
 		coverImage: "Images/MazeGame.png",
 		intro: `Enter the "Maze Game" competitive world, a multiplayer quest where players are plunged into a real-time race of wit and strategy rather than just navigating mazes.
@@ -211,7 +225,8 @@ const ProjectsInfo = [
 		link: "https://anudeepkalitkar.github.io/Image-Based-Authentication-System-Signature/",
 		urlname: "IBASSimilarity",
 		tools: ["Python", "HTML", "CSS", "JS", "Php"],
-		sourceCode: "https://github.com/anudeepkalitkar/Image-Based-Authentication-System-Signature",
+		sourceCode:
+			"https://github.com/anudeepkalitkar/Image-Based-Authentication-System-Signature",
 	},
 
 	{
@@ -247,7 +262,7 @@ const ProjectsInfo = [
 		In essence, the Image-Based Authentication System seamlessly merges usability with security. By anchoring the authentication process in visual memory, it not only simplifies user access but also offers a fresh, interactive approach to digital security. As cyber threats evolve, it's innovations like these that promise a safer, user-friendly digital future.`,
 		link: "https://anudeepkalitkar.github.io/Image-Based-Authentication-System/",
 		urlname: "IBASIcons",
-		tools: ["HTML", "CSS", "JS","Php"],
+		tools: ["HTML", "CSS", "JS", "Php"],
 		sourceCode: "https://github.com/anudeepkalitkar/Image-Based-Authentication-System-Icons",
 	},
 
@@ -280,7 +295,6 @@ const ProjectsInfo = [
 		sourceCode: null,
 	},
 
-	
 	{
 		title: "Man-Machine Interface for SRD Chipset",
 		coverImage: "Images/LMSgui.png",
@@ -292,7 +306,6 @@ const ProjectsInfo = [
 		tools: ["C++"],
 		sourceCode: null,
 	},
+];
 
-]
-
-export { ProjectsInfo}
+export { ProjectsInfo };

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { isMobile, isTablet, isBrowser } from 'react-device-detect';
 
 import "./Layout.css";
