@@ -24,10 +24,14 @@ section {
 
 :root::-webkit-scrollbar {
     width: 8px; 
+	display: none;
 }
 
 :root {
 	color-scheme: light;
     scrollbar-width: thin;
-    scrollbar-color: #888 transparent; 
+    scrollbar-color: #888 transparent;
+	scrollbar-width: none;
+	-ms-overflow-style: none; 
+
 }
