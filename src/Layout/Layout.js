@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { isMobile, isTablet, isBrowser } from 'react-device-detect';
+
 import "./Layout.css";
 import { DisplayImage } from "../StaticInformation/ImagesInfo";
 import { linkedinUrl, githubUrl, gmailUrl, instagramUrl } from "../StaticInformation/UrlLinkInfo";
 const Layout = (props) => {
 	const { PassedComponent } = props;
 	return (
-			<section>
-				<div className="header" id="Header">
+		<section>
+			<div className="header" id="Header">
+				{isMobile && <div className="container"><PassedComponent /></div>}
+				{isTablet && <div className="container"><PassedComponent /></div>}
+
+				{isBrowser && (
 					<div className="row">
-						<div className="col s4 container">
-							<div className="">
+						<div className="col s12 m4  nonscrollable">
+							<div className="container">
 								<div className="center">
 									<img className="hero" src={DisplayImage} alt="Me" />
 								</div>
@@ -84,12 +90,13 @@ const Layout = (props) => {
 								</ul>
 							</div>
 						</div>
-						<div className="col s8">
+						<div className="col s12 m8 scrollable">
 							<PassedComponent />
 						</div>
 					</div>
-				</div>
-			</section>
+				)}
+			</div>
+		</section>
 	);
 };
 

@@ -11,8 +11,8 @@ const Footer = (props) => {
 			<div className="footer">
 				<div className="">
 					<div className="row">
-						<div className=" col s1"></div>
-						<div className="col s7">
+						<div className=" col s12 m1"></div>
+						<div className="col s12 m7">
 							<div className="profile-content">
 								<h5 className="footer-heading">
 									<b>Anudeep Kalitkar</b>
@@ -20,7 +20,7 @@ const Footer = (props) => {
 								<h6 className="footer-desc">{HeaderInfo}</h6>
 							</div>
 						</div>
-						<div className="col s3">
+						<div className="col s12 m3">
 							<h5 className="footer-heading">
 								<b>Reach Me at:</b>
 							</h5>
@@ -64,7 +64,7 @@ const Footer = (props) => {
 								</li>
 							</ul>
 						</div>
-						<div className="col s3"></div>
+						<div className="col s12 m3"></div>
 					</div>
 				</div>
 			</div>

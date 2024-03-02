@@ -57,6 +57,21 @@
 	margin-top: 10%;
 	float: none;
 	text-align: center;
-	/* border: 20px rgba(37, 37, 37, 0); */
 	border-radius: 50%;
+}
+
+.nonscrollable {
+	height: 100vh;
+	overflow: hidden;
+}
+.scrollable {
+	flex-grow: 1;
+	height: 80vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+.scrollable::-webkit-scrollbar {
+	display: none;
 }
