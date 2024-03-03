@@ -261,9 +261,9 @@ const ProjectsInfo = [
 		The frontend elegantly displays the grid and captures user inputs using a combination of HTML, CSS, and JavaScript. In contrast, the backend, powered by PHP, efficiently processes the data, generates the hashes, and manages the database interactions.
 		In essence, the Image-Based Authentication System seamlessly merges usability with security. By anchoring the authentication process in visual memory, it not only simplifies user access but also offers a fresh, interactive approach to digital security. As cyber threats evolve, it's innovations like these that promise a safer, user-friendly digital future.`,
 		link: "https://anudeepkalitkar.github.io/Image-Based-Authentication-System/",
-		urlname: "IBASIcons",
+		urlname: "IBAS",
 		tools: ["HTML", "CSS", "JS", "Php"],
-		sourceCode: "https://github.com/anudeepkalitkar/Image-Based-Authentication-System-Icons",
+		sourceCode: "https://github.com/anudeepkalitkar/Image-Based-Authentication-System",
 	},
 
 	{
