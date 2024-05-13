@@ -26,7 +26,7 @@ const Education = (props) => {
 						<b>{edu.Degree}</b>
 					</span>
 					<span className="card-title" id={"title1-" + key}>
-						{edu.from}, ({edu.year})
+						{edu.from}, {edu.year}
 					</span>
 					<p className="">Major: {edu.major}</p>
 				</div>

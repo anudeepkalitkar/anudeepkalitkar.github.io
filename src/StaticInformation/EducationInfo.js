@@ -2,7 +2,7 @@ const EducationInfo = [
     {
       Degree: "Master of Science",
       from: "University of Colorado, Denver",
-      year: "Pursuing",
+      year: "2024",
       major: "Computer Science",
       percentage: null,
       CGPA: '3.87/4'
